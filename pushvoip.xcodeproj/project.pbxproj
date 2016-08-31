@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC4E831D1D76C1A800D9D5BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831C1D76C1A800D9D5BC /* main.m */; };
+		FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */; };
+		FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83221D76C1A800D9D5BC /* ViewController.m */; };
+		FC4E83261D76C1A800D9D5BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4E83241D76C1A800D9D5BC /* Main.storyboard */; };
+		FC4E83281D76C1A800D9D5BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4E83271D76C1A800D9D5BC /* Assets.xcassets */; };
+		FC4E832B1D76C1A800D9D5BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4E83291D76C1A800D9D5BC /* LaunchScreen.storyboard */; };
+		FC4E83361D76C1A800D9D5BC /* pushvoipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83351D76C1A800D9D5BC /* pushvoipTests.m */; };
+		FC4E83411D76C1A800D9D5BC /* pushvoipUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83401D76C1A800D9D5BC /* pushvoipUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC4E83321D76C1A800D9D5BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC4E83101D76C1A700D9D5BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC4E83171D76C1A700D9D5BC;
+			remoteInfo = pushvoip;
+		};
+		FC4E833D1D76C1A800D9D5BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC4E83101D76C1A700D9D5BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC4E83171D76C1A700D9D5BC;
+			remoteInfo = pushvoip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC4E83181D76C1A700D9D5BC /* pushvoip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushvoip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4E831C1D76C1A800D9D5BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC4E831E1D76C1A800D9D5BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC4E83211D76C1A800D9D5BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FC4E83221D76C1A800D9D5BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FC4E83251D76C1A800D9D5BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC4E83271D76C1A800D9D5BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC4E832A1D76C1A800D9D5BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC4E832C1D76C1A800D9D5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4E83311D76C1A800D9D5BC /* pushvoipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pushvoipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4E83351D76C1A800D9D5BC /* pushvoipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pushvoipTests.m; sourceTree = "<group>"; };
+		FC4E83371D76C1A800D9D5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4E833C1D76C1A800D9D5BC /* pushvoipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pushvoipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4E83401D76C1A800D9D5BC /* pushvoipUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pushvoipUITests.m; sourceTree = "<group>"; };
+		FC4E83421D76C1A800D9D5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC4E83151D76C1A700D9D5BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4E832E1D76C1A800D9D5BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4E83391D76C1A800D9D5BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC4E830F1D76C1A700D9D5BC = {
+			isa = PBXGroup;
+			children = (
+				FC4E831A1D76C1A800D9D5BC /* pushvoip */,
+				FC4E83341D76C1A800D9D5BC /* pushvoipTests */,
+				FC4E833F1D76C1A800D9D5BC /* pushvoipUITests */,
+				FC4E83191D76C1A700D9D5BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC4E83191D76C1A700D9D5BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC4E83181D76C1A700D9D5BC /* pushvoip.app */,
+				FC4E83311D76C1A800D9D5BC /* pushvoipTests.xctest */,
+				FC4E833C1D76C1A800D9D5BC /* pushvoipUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC4E831A1D76C1A800D9D5BC /* pushvoip */ = {
+			isa = PBXGroup;
+			children = (
+				FC4E831E1D76C1A800D9D5BC /* AppDelegate.h */,
+				FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */,
+				FC4E83211D76C1A800D9D5BC /* ViewController.h */,
+				FC4E83221D76C1A800D9D5BC /* ViewController.m */,
+				FC4E83241D76C1A800D9D5BC /* Main.storyboard */,
+				FC4E83271D76C1A800D9D5BC /* Assets.xcassets */,
+				FC4E83291D76C1A800D9D5BC /* LaunchScreen.storyboard */,
+				FC4E832C1D76C1A800D9D5BC /* Info.plist */,
+				FC4E831B1D76C1A800D9D5BC /* Supporting Files */,
+			);
+			path = pushvoip;
+			sourceTree = "<group>";
+		};
+		FC4E831B1D76C1A800D9D5BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC4E831C1D76C1A800D9D5BC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC4E83341D76C1A800D9D5BC /* pushvoipTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC4E83351D76C1A800D9D5BC /* pushvoipTests.m */,
+				FC4E83371D76C1A800D9D5BC /* Info.plist */,
+			);
+			path = pushvoipTests;
+			sourceTree = "<group>";
+		};
+		FC4E833F1D76C1A800D9D5BC /* pushvoipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC4E83401D76C1A800D9D5BC /* pushvoipUITests.m */,
+				FC4E83421D76C1A800D9D5BC /* Info.plist */,
+			);
+			path = pushvoipUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC4E83171D76C1A700D9D5BC /* pushvoip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC4E83451D76C1A800D9D5BC /* Build configuration list for PBXNativeTarget "pushvoip" */;
+			buildPhases = (
+				FC4E83141D76C1A700D9D5BC /* Sources */,
+				FC4E83151D76C1A700D9D5BC /* Frameworks */,
+				FC4E83161D76C1A700D9D5BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pushvoip;
+			productName = pushvoip;
+			productReference = FC4E83181D76C1A700D9D5BC /* pushvoip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC4E83301D76C1A800D9D5BC /* pushvoipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC4E83481D76C1A800D9D5BC /* Build configuration list for PBXNativeTarget "pushvoipTests" */;
+			buildPhases = (
+				FC4E832D1D76C1A800D9D5BC /* Sources */,
+				FC4E832E1D76C1A800D9D5BC /* Frameworks */,
+				FC4E832F1D76C1A800D9D5BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC4E83331D76C1A800D9D5BC /* PBXTargetDependency */,
+			);
+			name = pushvoipTests;
+			productName = pushvoipTests;
+			productReference = FC4E83311D76C1A800D9D5BC /* pushvoipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC4E833B1D76C1A800D9D5BC /* pushvoipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC4E834B1D76C1A800D9D5BC /* Build configuration list for PBXNativeTarget "pushvoipUITests" */;
+			buildPhases = (
+				FC4E83381D76C1A800D9D5BC /* Sources */,
+				FC4E83391D76C1A800D9D5BC /* Frameworks */,
+				FC4E833A1D76C1A800D9D5BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC4E833E1D76C1A800D9D5BC /* PBXTargetDependency */,
+			);
+			name = pushvoipUITests;
+			productName = pushvoipUITests;
+			productReference = FC4E833C1D76C1A800D9D5BC /* pushvoipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC4E83101D76C1A700D9D5BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Mei;
+				TargetAttributes = {
+					FC4E83171D76C1A700D9D5BC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FC4E83301D76C1A800D9D5BC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FC4E83171D76C1A700D9D5BC;
+					};
+					FC4E833B1D76C1A800D9D5BC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FC4E83171D76C1A700D9D5BC;
+					};
+				};
+			};
+			buildConfigurationList = FC4E83131D76C1A700D9D5BC /* Build configuration list for PBXProject "pushvoip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC4E830F1D76C1A700D9D5BC;
+			productRefGroup = FC4E83191D76C1A700D9D5BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC4E83171D76C1A700D9D5BC /* pushvoip */,
+				FC4E83301D76C1A800D9D5BC /* pushvoipTests */,
+				FC4E833B1D76C1A800D9D5BC /* pushvoipUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC4E83161D76C1A700D9D5BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4E832B1D76C1A800D9D5BC /* LaunchScreen.storyboard in Resources */,
+				FC4E83281D76C1A800D9D5BC /* Assets.xcassets in Resources */,
+				FC4E83261D76C1A800D9D5BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4E832F1D76C1A800D9D5BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4E833A1D76C1A800D9D5BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC4E83141D76C1A700D9D5BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */,
+				FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */,
+				FC4E831D1D76C1A800D9D5BC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4E832D1D76C1A800D9D5BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4E83361D76C1A800D9D5BC /* pushvoipTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4E83381D76C1A800D9D5BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4E83411D76C1A800D9D5BC /* pushvoipUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC4E83331D76C1A800D9D5BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC4E83171D76C1A700D9D5BC /* pushvoip */;
+			targetProxy = FC4E83321D76C1A800D9D5BC /* PBXContainerItemProxy */;
+		};
+		FC4E833E1D76C1A800D9D5BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC4E83171D76C1A700D9D5BC /* pushvoip */;
+			targetProxy = FC4E833D1D76C1A800D9D5BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC4E83241D76C1A800D9D5BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC4E83251D76C1A800D9D5BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC4E83291D76C1A800D9D5BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC4E832A1D76C1A800D9D5BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC4E83431D76C1A800D9D5BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FC4E83441D76C1A800D9D5BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC4E83461D76C1A800D9D5BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = pushvoip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Christophe.pushvoip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC4E83471D76C1A800D9D5BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = pushvoip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Christophe.pushvoip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FC4E83491D76C1A800D9D5BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = pushvoipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Christophe.pushvoipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pushvoip.app/pushvoip";
+			};
+			name = Debug;
+		};
+		FC4E834A1D76C1A800D9D5BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = pushvoipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Christophe.pushvoipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pushvoip.app/pushvoip";
+			};
+			name = Release;
+		};
+		FC4E834C1D76C1A800D9D5BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = pushvoipUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Christophe.pushvoipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = pushvoip;
+			};
+			name = Debug;
+		};
+		FC4E834D1D76C1A800D9D5BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = pushvoipUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Christophe.pushvoipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = pushvoip;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC4E83131D76C1A700D9D5BC /* Build configuration list for PBXProject "pushvoip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC4E83431D76C1A800D9D5BC /* Debug */,
+				FC4E83441D76C1A800D9D5BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC4E83451D76C1A800D9D5BC /* Build configuration list for PBXNativeTarget "pushvoip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC4E83461D76C1A800D9D5BC /* Debug */,
+				FC4E83471D76C1A800D9D5BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC4E83481D76C1A800D9D5BC /* Build configuration list for PBXNativeTarget "pushvoipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC4E83491D76C1A800D9D5BC /* Debug */,
+				FC4E834A1D76C1A800D9D5BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC4E834B1D76C1A800D9D5BC /* Build configuration list for PBXNativeTarget "pushvoipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC4E834C1D76C1A800D9D5BC /* Debug */,
+				FC4E834D1D76C1A800D9D5BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC4E83101D76C1A700D9D5BC /* Project object */;
+}
