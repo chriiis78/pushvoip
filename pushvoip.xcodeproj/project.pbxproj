@@ -15,6 +15,10 @@
 		FC4E832B1D76C1A800D9D5BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4E83291D76C1A800D9D5BC /* LaunchScreen.storyboard */; };
 		FC4E83361D76C1A800D9D5BC /* pushvoipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83351D76C1A800D9D5BC /* pushvoipTests.m */; };
 		FC4E83411D76C1A800D9D5BC /* pushvoipUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83401D76C1A800D9D5BC /* pushvoipUITests.m */; };
+		FC4E83501D76C31700D9D5BC /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4E834F1D76C31700D9D5BC /* PushKit.framework */; };
+		FC4E83521D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = FC4E83511D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision */; };
+		FCF482381D77040800946B2E /* ACNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF482361D77040700946B2E /* ACNotification.m */; };
+		FCF4823A1D77043400946B2E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF482391D77043400946B2E /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,12 @@
 		FC4E833C1D76C1A800D9D5BC /* pushvoipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pushvoipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4E83401D76C1A800D9D5BC /* pushvoipUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pushvoipUITests.m; sourceTree = "<group>"; };
 		FC4E83421D76C1A800D9D5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4E834E1D76C2C500D9D5BC /* christestvoip.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = christestvoip.mobileprovision; sourceTree = "<group>"; };
+		FC4E834F1D76C31700D9D5BC /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		FC4E83511D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; name = christestvoip2distrib.mobileprovision; path = ../../../../Desktop/christestvoip2distrib.mobileprovision; sourceTree = "<group>"; };
+		FCF482361D77040700946B2E /* ACNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACNotification.m; path = ../../../../../Downloads/ACNotification.m; sourceTree = "<group>"; };
+		FCF482371D77040700946B2E /* ACNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACNotification.h; path = ../../../../../Downloads/ACNotification.h; sourceTree = "<group>"; };
+		FCF482391D77043400946B2E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF4823A1D77043400946B2E /* CoreLocation.framework in Frameworks */,
+				FC4E83501D76C31700D9D5BC /* PushKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +93,14 @@
 		FC4E830F1D76C1A700D9D5BC = {
 			isa = PBXGroup;
 			children = (
+				FCF482391D77043400946B2E /* CoreLocation.framework */,
+				FC4E834F1D76C31700D9D5BC /* PushKit.framework */,
 				FC4E831A1D76C1A800D9D5BC /* pushvoip */,
 				FC4E83341D76C1A800D9D5BC /* pushvoipTests */,
 				FC4E833F1D76C1A800D9D5BC /* pushvoipUITests */,
 				FC4E83191D76C1A700D9D5BC /* Products */,
+				FC4E834E1D76C2C500D9D5BC /* christestvoip.mobileprovision */,
+				FC4E83511D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +119,8 @@
 			children = (
 				FC4E831E1D76C1A800D9D5BC /* AppDelegate.h */,
 				FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */,
+				FCF482371D77040700946B2E /* ACNotification.h */,
+				FCF482361D77040700946B2E /* ACNotification.m */,
 				FC4E83211D76C1A800D9D5BC /* ViewController.h */,
 				FC4E83221D76C1A800D9D5BC /* ViewController.m */,
 				FC4E83241D76C1A800D9D5BC /* Main.storyboard */,
@@ -207,6 +225,15 @@
 				TargetAttributes = {
 					FC4E83171D76C1A700D9D5BC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8Y8UU84C45;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					FC4E83301D76C1A800D9D5BC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -245,6 +272,7 @@
 			files = (
 				FC4E832B1D76C1A800D9D5BC /* LaunchScreen.storyboard in Resources */,
 				FC4E83281D76C1A800D9D5BC /* Assets.xcassets in Resources */,
+				FC4E83521D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision in Resources */,
 				FC4E83261D76C1A800D9D5BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +300,7 @@
 			files = (
 				FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */,
 				FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */,
+				FCF482381D77040800946B2E /* ACNotification.m in Sources */,
 				FC4E831D1D76C1A800D9D5BC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,10 +442,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = pushvoip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Christophe.pushvoip;
+				PRODUCT_BUNDLE_IDENTIFIER = org.aedmap.testvoip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -424,10 +457,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = pushvoip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Christophe.pushvoip;
+				PRODUCT_BUNDLE_IDENTIFIER = org.aedmap.testvoip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -496,6 +533,7 @@
 				FC4E83471D76C1A800D9D5BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC4E83481D76C1A800D9D5BC /* Build configuration list for PBXNativeTarget "pushvoipTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +542,7 @@
 				FC4E834A1D76C1A800D9D5BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC4E834B1D76C1A800D9D5BC /* Build configuration list for PBXNativeTarget "pushvoipUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +551,7 @@
 				FC4E834D1D76C1A800D9D5BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
