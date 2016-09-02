@@ -85,6 +85,7 @@
     NSLog(@"%@", aps);
     double lat1 = [[aps valueForKey:@"lat"] doubleValue];
     double lon1 = [[aps valueForKey:@"lon"] doubleValue];
+    double radius = [[aps valueForKey:@"radius"] doubleValue];
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -98,7 +99,7 @@
     double result = (acos(sin(lat1 * 0.0174533) * sin(lat2 * 0.0174533) + cos(lat1 * 0.0174533) * cos(lat2 * 0.0174533) * cos((lon2-lon1) * 0.0174533)) * 6371000);
     NSLog(@"result %f", result);
     
-    if (result < 500.0){
+    if (result < radius){
         NSLog(@"DANS LES ENVIRONS");
         UILocalNotification *notification = [[UILocalNotification alloc] init];
         //notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:7];
