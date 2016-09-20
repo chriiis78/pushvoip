@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B516F901D8AA36200D1A45A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B516F8E1D8AA36200D1A45A /* Interface.storyboard */; };
+		6B516F921D8AA36200D1A45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B516F911D8AA36200D1A45A /* Assets.xcassets */; };
+		6B516F991D8AA36200D1A45A /* pushvoip watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6B516F981D8AA36200D1A45A /* pushvoip watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6B516FA11D8AA36200D1A45A /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B516FA01D8AA36200D1A45A /* InterfaceController.m */; };
+		6B516FA41D8AA36200D1A45A /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B516FA31D8AA36200D1A45A /* ExtensionDelegate.m */; };
+		6B516FA71D8AA36200D1A45A /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B516FA61D8AA36200D1A45A /* NotificationController.m */; };
+		6B516FAA1D8AA36200D1A45A /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B516FA91D8AA36200D1A45A /* GlanceController.m */; };
+		6B516FAD1D8AA36200D1A45A /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B516FAC1D8AA36200D1A45A /* ComplicationController.m */; };
+		6B516FAF1D8AA36200D1A45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B516FAE1D8AA36200D1A45A /* Assets.xcassets */; };
+		6B516FB31D8AA36200D1A45A /* pushvoip watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6B516F8C1D8AA36200D1A45A /* pushvoip watch.app */; };
+		6B516FBD1D8AA88600D1A45A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B516FBC1D8AA88600D1A45A /* MapKit.framework */; };
+		6BE0E78D1D917DE900D38431 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B516F8E1D8AA36200D1A45A /* Interface.storyboard */; };
 		FC4E831D1D76C1A800D9D5BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831C1D76C1A800D9D5BC /* main.m */; };
 		FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */; };
 		FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83221D76C1A800D9D5BC /* ViewController.m */; };
@@ -16,12 +28,24 @@
 		FC4E83361D76C1A800D9D5BC /* pushvoipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83351D76C1A800D9D5BC /* pushvoipTests.m */; };
 		FC4E83411D76C1A800D9D5BC /* pushvoipUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83401D76C1A800D9D5BC /* pushvoipUITests.m */; };
 		FC4E83501D76C31700D9D5BC /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4E834F1D76C31700D9D5BC /* PushKit.framework */; };
-		FC4E83521D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = FC4E83511D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision */; };
-		FCF482381D77040800946B2E /* ACNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF482361D77040700946B2E /* ACNotification.m */; };
 		FCF4823A1D77043400946B2E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF482391D77043400946B2E /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6B516F9A1D8AA36200D1A45A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC4E83101D76C1A700D9D5BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B516F971D8AA36200D1A45A;
+			remoteInfo = "pushvoip watch Extension";
+		};
+		6B516FB11D8AA36200D1A45A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC4E83101D76C1A700D9D5BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B516F8B1D8AA36200D1A45A;
+			remoteInfo = "pushvoip watch";
+		};
 		FC4E83321D76C1A800D9D5BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC4E83101D76C1A700D9D5BC /* Project object */;
@@ -38,7 +62,51 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6B516FB91D8AA36200D1A45A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6B516F991D8AA36200D1A45A /* pushvoip watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B516FBB1D8AA36200D1A45A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6B516FB31D8AA36200D1A45A /* pushvoip watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6B516F8C1D8AA36200D1A45A /* pushvoip watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pushvoip watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B516F8F1D8AA36200D1A45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		6B516F911D8AA36200D1A45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B516F931D8AA36200D1A45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B516F981D8AA36200D1A45A /* pushvoip watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "pushvoip watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B516F9E1D8AA36200D1A45A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		6B516F9F1D8AA36200D1A45A /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		6B516FA01D8AA36200D1A45A /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		6B516FA21D8AA36200D1A45A /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		6B516FA31D8AA36200D1A45A /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		6B516FA51D8AA36200D1A45A /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		6B516FA61D8AA36200D1A45A /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		6B516FA81D8AA36200D1A45A /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		6B516FA91D8AA36200D1A45A /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		6B516FAB1D8AA36200D1A45A /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		6B516FAC1D8AA36200D1A45A /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
+		6B516FAE1D8AA36200D1A45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B516FB01D8AA36200D1A45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B516FBC1D8AA88600D1A45A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FC4E83181D76C1A700D9D5BC /* pushvoip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushvoip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4E831C1D76C1A800D9D5BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC4E831E1D76C1A800D9D5BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,19 +123,23 @@
 		FC4E833C1D76C1A800D9D5BC /* pushvoipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pushvoipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4E83401D76C1A800D9D5BC /* pushvoipUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pushvoipUITests.m; sourceTree = "<group>"; };
 		FC4E83421D76C1A800D9D5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC4E834E1D76C2C500D9D5BC /* christestvoip.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = christestvoip.mobileprovision; sourceTree = "<group>"; };
 		FC4E834F1D76C31700D9D5BC /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
-		FC4E83511D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; name = christestvoip2distrib.mobileprovision; path = ../../../../Desktop/christestvoip2distrib.mobileprovision; sourceTree = "<group>"; };
-		FCF482361D77040700946B2E /* ACNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACNotification.m; path = ../../../../../Downloads/ACNotification.m; sourceTree = "<group>"; };
-		FCF482371D77040700946B2E /* ACNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACNotification.h; path = ../../../../../Downloads/ACNotification.h; sourceTree = "<group>"; };
 		FCF482391D77043400946B2E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6B516F951D8AA36200D1A45A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC4E83151D76C1A700D9D5BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B516FBD1D8AA88600D1A45A /* MapKit.framework in Frameworks */,
 				FCF4823A1D77043400946B2E /* CoreLocation.framework in Frameworks */,
 				FC4E83501D76C31700D9D5BC /* PushKit.framework in Frameworks */,
 			);
@@ -90,17 +162,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B516F8D1D8AA36200D1A45A /* pushvoip watch */ = {
+			isa = PBXGroup;
+			children = (
+				6B516F8E1D8AA36200D1A45A /* Interface.storyboard */,
+				6B516F911D8AA36200D1A45A /* Assets.xcassets */,
+				6B516F931D8AA36200D1A45A /* Info.plist */,
+			);
+			path = "pushvoip watch";
+			sourceTree = "<group>";
+		};
+		6B516F9C1D8AA36200D1A45A /* pushvoip watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6B516F9F1D8AA36200D1A45A /* InterfaceController.h */,
+				6B516FA01D8AA36200D1A45A /* InterfaceController.m */,
+				6B516FA21D8AA36200D1A45A /* ExtensionDelegate.h */,
+				6B516FA31D8AA36200D1A45A /* ExtensionDelegate.m */,
+				6B516FA51D8AA36200D1A45A /* NotificationController.h */,
+				6B516FA61D8AA36200D1A45A /* NotificationController.m */,
+				6B516FA81D8AA36200D1A45A /* GlanceController.h */,
+				6B516FA91D8AA36200D1A45A /* GlanceController.m */,
+				6B516FAB1D8AA36200D1A45A /* ComplicationController.h */,
+				6B516FAC1D8AA36200D1A45A /* ComplicationController.m */,
+				6B516FAE1D8AA36200D1A45A /* Assets.xcassets */,
+				6B516FB01D8AA36200D1A45A /* Info.plist */,
+				6B516F9D1D8AA36200D1A45A /* Supporting Files */,
+			);
+			path = "pushvoip watch Extension";
+			sourceTree = "<group>";
+		};
+		6B516F9D1D8AA36200D1A45A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B516F9E1D8AA36200D1A45A /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FC4E830F1D76C1A700D9D5BC = {
 			isa = PBXGroup;
 			children = (
+				6B516FBC1D8AA88600D1A45A /* MapKit.framework */,
 				FCF482391D77043400946B2E /* CoreLocation.framework */,
 				FC4E834F1D76C31700D9D5BC /* PushKit.framework */,
 				FC4E831A1D76C1A800D9D5BC /* pushvoip */,
 				FC4E83341D76C1A800D9D5BC /* pushvoipTests */,
 				FC4E833F1D76C1A800D9D5BC /* pushvoipUITests */,
+				6B516F8D1D8AA36200D1A45A /* pushvoip watch */,
+				6B516F9C1D8AA36200D1A45A /* pushvoip watch Extension */,
 				FC4E83191D76C1A700D9D5BC /* Products */,
-				FC4E834E1D76C2C500D9D5BC /* christestvoip.mobileprovision */,
-				FC4E83511D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +221,8 @@
 				FC4E83181D76C1A700D9D5BC /* pushvoip.app */,
 				FC4E83311D76C1A800D9D5BC /* pushvoipTests.xctest */,
 				FC4E833C1D76C1A800D9D5BC /* pushvoipUITests.xctest */,
+				6B516F8C1D8AA36200D1A45A /* pushvoip watch.app */,
+				6B516F981D8AA36200D1A45A /* pushvoip watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,8 +232,6 @@
 			children = (
 				FC4E831E1D76C1A800D9D5BC /* AppDelegate.h */,
 				FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */,
-				FCF482371D77040700946B2E /* ACNotification.h */,
-				FCF482361D77040700946B2E /* ACNotification.m */,
 				FC4E83211D76C1A800D9D5BC /* ViewController.h */,
 				FC4E83221D76C1A800D9D5BC /* ViewController.m */,
 				FC4E83241D76C1A800D9D5BC /* Main.storyboard */,
@@ -161,6 +272,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6B516F8B1D8AA36200D1A45A /* pushvoip watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B516FBA1D8AA36200D1A45A /* Build configuration list for PBXNativeTarget "pushvoip watch" */;
+			buildPhases = (
+				6B516F8A1D8AA36200D1A45A /* Resources */,
+				6B516FB91D8AA36200D1A45A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B516F9B1D8AA36200D1A45A /* PBXTargetDependency */,
+			);
+			name = "pushvoip watch";
+			productName = "pushvoip watch";
+			productReference = 6B516F8C1D8AA36200D1A45A /* pushvoip watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		6B516F971D8AA36200D1A45A /* pushvoip watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B516FB81D8AA36200D1A45A /* Build configuration list for PBXNativeTarget "pushvoip watch Extension" */;
+			buildPhases = (
+				6B516F941D8AA36200D1A45A /* Sources */,
+				6B516F951D8AA36200D1A45A /* Frameworks */,
+				6B516F961D8AA36200D1A45A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pushvoip watch Extension";
+			productName = "pushvoip watch Extension";
+			productReference = 6B516F981D8AA36200D1A45A /* pushvoip watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		FC4E83171D76C1A700D9D5BC /* pushvoip */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC4E83451D76C1A800D9D5BC /* Build configuration list for PBXNativeTarget "pushvoip" */;
@@ -168,10 +313,12 @@
 				FC4E83141D76C1A700D9D5BC /* Sources */,
 				FC4E83151D76C1A700D9D5BC /* Frameworks */,
 				FC4E83161D76C1A700D9D5BC /* Resources */,
+				6B516FBB1D8AA36200D1A45A /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6B516FB21D8AA36200D1A45A /* PBXTargetDependency */,
 			);
 			name = pushvoip;
 			productName = pushvoip;
@@ -223,6 +370,13 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Mei;
 				TargetAttributes = {
+					6B516F8B1D8AA36200D1A45A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8Y8UU84C45;
+					};
+					6B516F971D8AA36200D1A45A = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					FC4E83171D76C1A700D9D5BC = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 8Y8UU84C45;
@@ -261,18 +415,37 @@
 				FC4E83171D76C1A700D9D5BC /* pushvoip */,
 				FC4E83301D76C1A800D9D5BC /* pushvoipTests */,
 				FC4E833B1D76C1A800D9D5BC /* pushvoipUITests */,
+				6B516F8B1D8AA36200D1A45A /* pushvoip watch */,
+				6B516F971D8AA36200D1A45A /* pushvoip watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6B516F8A1D8AA36200D1A45A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B516F921D8AA36200D1A45A /* Assets.xcassets in Resources */,
+				6B516F901D8AA36200D1A45A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B516F961D8AA36200D1A45A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE0E78D1D917DE900D38431 /* Interface.storyboard in Resources */,
+				6B516FAF1D8AA36200D1A45A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC4E83161D76C1A700D9D5BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC4E832B1D76C1A800D9D5BC /* LaunchScreen.storyboard in Resources */,
 				FC4E83281D76C1A800D9D5BC /* Assets.xcassets in Resources */,
-				FC4E83521D76E7CD00D9D5BC /* christestvoip2distrib.mobileprovision in Resources */,
 				FC4E83261D76C1A800D9D5BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,13 +467,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6B516F941D8AA36200D1A45A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B516FA41D8AA36200D1A45A /* ExtensionDelegate.m in Sources */,
+				6B516FA11D8AA36200D1A45A /* InterfaceController.m in Sources */,
+				6B516FA71D8AA36200D1A45A /* NotificationController.m in Sources */,
+				6B516FAA1D8AA36200D1A45A /* GlanceController.m in Sources */,
+				6B516FAD1D8AA36200D1A45A /* ComplicationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC4E83141D76C1A700D9D5BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */,
 				FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */,
-				FCF482381D77040800946B2E /* ACNotification.m in Sources */,
 				FC4E831D1D76C1A800D9D5BC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +508,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6B516F9B1D8AA36200D1A45A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B516F971D8AA36200D1A45A /* pushvoip watch Extension */;
+			targetProxy = 6B516F9A1D8AA36200D1A45A /* PBXContainerItemProxy */;
+		};
+		6B516FB21D8AA36200D1A45A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B516F8B1D8AA36200D1A45A /* pushvoip watch */;
+			targetProxy = 6B516FB11D8AA36200D1A45A /* PBXContainerItemProxy */;
+		};
 		FC4E83331D76C1A800D9D5BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FC4E83171D76C1A700D9D5BC /* pushvoip */;
@@ -337,6 +531,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6B516F8E1D8AA36200D1A45A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B516F8F1D8AA36200D1A45A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		FC4E83241D76C1A800D9D5BC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -356,6 +558,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6B516FB41D8AA36200D1A45A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = pushvoip_watch_Extension;
+				INFOPLIST_FILE = "pushvoip watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aedmap.testvoip.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		6B516FB51D8AA36200D1A45A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = pushvoip_watch_Extension;
+				INFOPLIST_FILE = "pushvoip watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aedmap.testvoip.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		6B516FB61D8AA36200D1A45A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "pushvoip watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aedmap.testvoip.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		6B516FB71D8AA36200D1A45A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "pushvoip watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aedmap.testvoip.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		FC4E83431D76C1A800D9D5BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -517,6 +783,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6B516FB81D8AA36200D1A45A /* Build configuration list for PBXNativeTarget "pushvoip watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B516FB61D8AA36200D1A45A /* Debug */,
+				6B516FB71D8AA36200D1A45A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B516FBA1D8AA36200D1A45A /* Build configuration list for PBXNativeTarget "pushvoip watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B516FB41D8AA36200D1A45A /* Debug */,
+				6B516FB51D8AA36200D1A45A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FC4E83131D76C1A700D9D5BC /* Build configuration list for PBXProject "pushvoip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

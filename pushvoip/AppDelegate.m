@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import <PushKit/PushKit.h>
-#import "ACNotification.h"
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
 
@@ -28,7 +27,125 @@
                                                        settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|
                                                        UIUserNotificationTypeSound categories:nil]];
     }
+    
+    //Here we are just going to create the actions for the category.
+    UIMutableUserNotificationAction *acceptAction = [self createAction];
+    UIMutableUserNotificationAction *laterAction = [self createLaterAction];
+    laterAction.title = @"Nop";
+    //Create category
+    UIMutableUserNotificationCategory *acceptCategory = [self createCategory:@[acceptAction, laterAction]];
+    //Register the categories
+    [self registerCategorySettings:acceptCategory];
+    
+    
     return YES;
+}
+
+// START Create notifications types *********************
+
+//Create a category
+- (UIMutableUserNotificationCategory *)createCategory:(NSArray *)actions {
+    UIMutableUserNotificationCategory *acceptCategory = [[UIMutableUserNotificationCategory alloc] init];
+    acceptCategory.identifier = @"ACCEPT_CATEGORY";
+    
+    [acceptCategory setActions:actions forContext:UIUserNotificationActionContextDefault];
+    
+    return acceptCategory;
+}
+
+//Register your settings for that category
+- (void)registerCategorySettings:(UIMutableUserNotificationCategory *)category {
+    UIUserNotificationType types = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);
+    
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_8_0) {
+        NSSet *categories = [NSSet setWithObjects:category, nil];
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    }else{
+        // ancienne version
+        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
+    }
+}
+
+//Create Actions Methods
+- (UIMutableUserNotificationAction *)createAction {
+    
+    UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
+    acceptAction.identifier = @"ACCEPT_IDENTIFIER";
+    acceptAction.title = @"Oui";  //@"Oui";
+    
+    acceptAction.activationMode = UIUserNotificationActivationModeBackground;
+    acceptAction.destructive = NO;
+    
+    // If YES requires passcode
+    acceptAction.authenticationRequired = NO;
+    
+    return acceptAction;
+}
+
+- (UIMutableUserNotificationAction *)createLaterAction {
+    
+    UIMutableUserNotificationAction *laterAction = [[UIMutableUserNotificationAction alloc] init];
+    laterAction.identifier = @"LATER_IDENTIFIER";
+    laterAction.title = @"Non"; //@"Non"; // AMLocalizedString(@"YES",@"")
+    
+    laterAction.activationMode = UIUserNotificationActivationModeBackground;
+    laterAction.destructive = NO;
+    laterAction.authenticationRequired = NO;
+    
+    return laterAction;
+}
+
+// END Create notifications types ********************
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification withResponseInfo:(NSDictionary *)userInfo completionHandler:(void (^)())completionHandler {
+    NSLog(@"--- handleActionWithIdentifier");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[notification.userInfo objectForKey:@"tag"] forKey:@"NOTIF_TAG"];
+    [defaults setObject:[notification.userInfo objectForKey:@"alertId"] forKey:@"NOTIF_ALERT"];
+    [defaults setObject:[notification.userInfo objectForKey:@"address"] forKey:@"NOTIF_ALERT_ADDRESS"];
+    [defaults setObject:[notification.userInfo objectForKey:@"lon"] forKey:@"NOTIF_ALERT_LON"];
+    [defaults setObject:[notification.userInfo objectForKey:@"lat"] forKey:@"NOTIF_ALERT_LAT"];
+    [defaults setObject:[notification.userInfo objectForKey:@"addressInfo"] forKey:@"NOTIF_ALERT_ADDRESS_INFO"];
+    [defaults synchronize];
+    
+    NSLog(@" userinfo handleActionWithIdentifier  = %@ " , [notification.userInfo description]);
+    
+    
+    if ([identifier isEqualToString:@"ACCEPT_IDENTIFIER"]) {
+        
+        NSLog(@"You chose action YES");
+            
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:@"" forKey:@"NOTIF_TAG"];
+            [defaults setObject:[defaults objectForKey:@"NOTIF_ALERT"] forKey:@"NOTIF_LAST_ALERTID_DISPLAYED"];
+            [defaults synchronize];
+        
+        
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        //notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:7];
+        notification.alertBody = @"Vous serez contacté";
+        notification.timeZone = [NSTimeZone defaultTimeZone];
+        notification.soundName = UILocalNotificationDefaultSoundName;
+        notification.applicationIconBadgeNumber = 10;
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    }
+    else if ([identifier isEqualToString:@"LATER_IDENTIFIER"]) {
+        
+        NSLog(@"You chose action NO");
+        
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        //notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:7];
+        notification.alertBody = @"Refus ok";
+        notification.timeZone = [NSTimeZone defaultTimeZone];
+        notification.soundName = UILocalNotificationDefaultSoundName;
+        notification.applicationIconBadgeNumber = 10;
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    }
+    if (completionHandler) {
+        completionHandler();
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -52,6 +169,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 // Register for VoIP notifications
 - (void) voipRegistration {
@@ -116,12 +234,13 @@
 }
 
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-    
+    /*
     UIAlertView *notificationAlert = [[UIAlertView alloc] initWithTitle:@"Notification"    message:@"This local notification"
                                                                delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     
     [notificationAlert show];
     // NSLog(@"didReceiveLocalNotification");
+     */
 }
 
 @end
