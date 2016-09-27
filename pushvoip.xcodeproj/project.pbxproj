@@ -18,6 +18,10 @@
 		6B516FAF1D8AA36200D1A45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B516FAE1D8AA36200D1A45A /* Assets.xcassets */; };
 		6B516FB31D8AA36200D1A45A /* pushvoip watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6B516F8C1D8AA36200D1A45A /* pushvoip watch.app */; };
 		6B516FBD1D8AA88600D1A45A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B516FBC1D8AA88600D1A45A /* MapKit.framework */; };
+		6BD060E01D9A78920040EED0 /* BSRegisterNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060DF1D9A78920040EED0 /* BSRegisterNavigationController.m */; };
+		6BD060E31D9A7CCE0040EED0 /* BSRegisterFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060E21D9A7CCE0040EED0 /* BSRegisterFirstViewController.m */; };
+		6BD060E61D9A9C8D0040EED0 /* BSRegisterSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060E51D9A9C8D0040EED0 /* BSRegisterSecondViewController.m */; };
+		6BD060E91D9A9D8E0040EED0 /* BSRegisterThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060E81D9A9D8E0040EED0 /* BSRegisterThirdViewController.m */; };
 		6BE0E78D1D917DE900D38431 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B516F8E1D8AA36200D1A45A /* Interface.storyboard */; };
 		FC4E831D1D76C1A800D9D5BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831C1D76C1A800D9D5BC /* main.m */; };
 		FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */; };
@@ -107,6 +111,14 @@
 		6B516FAE1D8AA36200D1A45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B516FB01D8AA36200D1A45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B516FBC1D8AA88600D1A45A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6BD060DE1D9A78920040EED0 /* BSRegisterNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterNavigationController.h; sourceTree = "<group>"; };
+		6BD060DF1D9A78920040EED0 /* BSRegisterNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterNavigationController.m; sourceTree = "<group>"; };
+		6BD060E11D9A7CCE0040EED0 /* BSRegisterFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterFirstViewController.h; sourceTree = "<group>"; };
+		6BD060E21D9A7CCE0040EED0 /* BSRegisterFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterFirstViewController.m; sourceTree = "<group>"; };
+		6BD060E41D9A9C8D0040EED0 /* BSRegisterSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterSecondViewController.h; sourceTree = "<group>"; };
+		6BD060E51D9A9C8D0040EED0 /* BSRegisterSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterSecondViewController.m; sourceTree = "<group>"; };
+		6BD060E71D9A9D8E0040EED0 /* BSRegisterThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterThirdViewController.h; sourceTree = "<group>"; };
+		6BD060E81D9A9D8E0040EED0 /* BSRegisterThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterThirdViewController.m; sourceTree = "<group>"; };
 		FC4E83181D76C1A700D9D5BC /* pushvoip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushvoip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4E831C1D76C1A800D9D5BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC4E831E1D76C1A800D9D5BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -234,9 +246,17 @@
 				FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */,
 				FC4E83211D76C1A800D9D5BC /* ViewController.h */,
 				FC4E83221D76C1A800D9D5BC /* ViewController.m */,
+				6BD060E11D9A7CCE0040EED0 /* BSRegisterFirstViewController.h */,
+				6BD060E21D9A7CCE0040EED0 /* BSRegisterFirstViewController.m */,
+				6BD060E41D9A9C8D0040EED0 /* BSRegisterSecondViewController.h */,
+				6BD060E51D9A9C8D0040EED0 /* BSRegisterSecondViewController.m */,
+				6BD060E71D9A9D8E0040EED0 /* BSRegisterThirdViewController.h */,
+				6BD060E81D9A9D8E0040EED0 /* BSRegisterThirdViewController.m */,
+				6BD060DE1D9A78920040EED0 /* BSRegisterNavigationController.h */,
+				6BD060DF1D9A78920040EED0 /* BSRegisterNavigationController.m */,
 				FC4E83241D76C1A800D9D5BC /* Main.storyboard */,
-				FC4E83271D76C1A800D9D5BC /* Assets.xcassets */,
 				FC4E83291D76C1A800D9D5BC /* LaunchScreen.storyboard */,
+				FC4E83271D76C1A800D9D5BC /* Assets.xcassets */,
 				FC4E832C1D76C1A800D9D5BC /* Info.plist */,
 				FC4E831B1D76C1A800D9D5BC /* Supporting Files */,
 			);
@@ -483,8 +503,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD060E91D9A9D8E0040EED0 /* BSRegisterThirdViewController.m in Sources */,
 				FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */,
+				6BD060E31D9A7CCE0040EED0 /* BSRegisterFirstViewController.m in Sources */,
 				FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */,
+				6BD060E01D9A78920040EED0 /* BSRegisterNavigationController.m in Sources */,
+				6BD060E61D9A9C8D0040EED0 /* BSRegisterSecondViewController.m in Sources */,
 				FC4E831D1D76C1A800D9D5BC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
