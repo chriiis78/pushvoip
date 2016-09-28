@@ -253,6 +253,9 @@ votre numéro de téléphone.</string>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                                <color key="value" red="0.0015921897011920241" green="0.68774541884816753" blue="0.0065580607751296359" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -264,6 +267,9 @@ votre numéro de téléphone.</string>
                                                                 <include reference="ufc-AT-er3"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <segue destination="Obh-aw-zyS" kind="show" id="l5Y-eT-S3t"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -397,6 +403,32 @@ votre numéro de téléphone.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QY2-yC-ryU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="879" y="1043"/>
+        </scene>
+        <!--Animals-->
+        <scene sceneID="MqR-OE-kFD">
+            <objects>
+                <tableViewController id="Obh-aw-zyS" customClass="BSRegisterFirstCountryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Eek-Rf-dKB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="iUS-A6-aTt">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iUS-A6-aTt" id="Pw4-Tk-BYY">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Obh-aw-zyS" id="yXf-cd-pra"/>
+                            <outlet property="delegate" destination="Obh-aw-zyS" id="MmR-Hw-m6A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Animals" id="opP-So-VXK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Tr-8G-mFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="1745"/>
         </scene>
         <!--Register Second View Controller-->
         <scene sceneID="haw-CP-afN">
@@ -682,11 +714,24 @@ que vous avez reçu par SMS.</string>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="a8z-dS-rxG">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9H-nb-98W">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexe :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9H-nb-98W">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JWd-RQ-Gwd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="JWd-RQ-Gwd"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="JWd-RQ-Gwd"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2de-zv-Rj2">
                                         <rect key="frame" x="-60" y="-14" width="121" height="29"/>
@@ -697,7 +742,9 @@ que vous avez reçu par SMS.</string>
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="1BG-qU-DWz"/>
+                                    <constraint firstAttribute="height" constant="35" id="1BG-qU-DWz">
+                                        <variation key="widthClass=compact" constant="30"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1079,6 +1126,66 @@ que vous avez reçu par SMS.</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nF-xN-VWA">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Ssm-Ce-sKI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                        <color key="value" red="0.82458687829999999" green="0.82458687829999999" blue="0.82458687829999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ssm-Ce-sKI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ssm-Ce-sKI"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IkB-s3-Yx4">
+                                <rect key="frame" x="-160" y="-108" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="496750839.78097802">
+                                    <!--2016-09-28 10:20:39 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZb-gn-cQB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.00032368686330000001" green="0.6997300393" blue="0.23112587279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JfJ-Xa-QfD"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Terminer l'inscription">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JfJ-Xa-QfD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JfJ-Xa-QfD"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="btnFinishOnClick:" destination="XKr-Bf-rp1" eventType="touchUpInside" id="UEj-tc-eNt"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="exA-K5-jMX">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
                                 <subviews>
@@ -1114,41 +1221,6 @@ que vous avez reçu par SMS.</string>
                                     </mask>
                                 </variation>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZb-gn-cQB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.00032368686330000001" green="0.6997300393" blue="0.23112587279999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JfJ-Xa-QfD"/>
-                                </constraints>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Terminer l'inscription">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="JfJ-Xa-QfD"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="JfJ-Xa-QfD"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="btnFinishOnClick:" destination="XKr-Bf-rp1" eventType="touchUpInside" id="UEj-tc-eNt"/>
-                                </connections>
-                            </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IkB-s3-Yx4">
-                                <rect key="frame" x="-160" y="-108" width="320" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="496750839.78097802">
-                                    <!--2016-09-28 10:20:39 +0000-->
-                                </date>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1160,12 +1232,23 @@ que vous avez reçu par SMS.</string>
                             </constraint>
                             <constraint firstItem="EV8-GM-gxT" firstAttribute="trailing" secondItem="TpC-VR-acE" secondAttribute="trailing" id="8vN-xu-ppd"/>
                             <constraint firstItem="EV8-GM-gxT" firstAttribute="top" secondItem="XLU-zp-yCl" secondAttribute="bottom" constant="8" symbolic="YES" id="8xN-5x-tQo"/>
+                            <constraint firstItem="1nF-xN-VWA" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leadingMargin" id="9me-IL-186"/>
+                            <constraint firstItem="EZb-gn-cQB" firstAttribute="top" secondItem="1nF-xN-VWA" secondAttribute="bottom" id="BDi-MZ-Ozr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1nF-xN-VWA" secondAttribute="trailing" id="Bdw-hU-39f"/>
                             <constraint firstItem="IkB-s3-Yx4" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leadingMargin" id="F9J-Ck-vcT"/>
                             <constraint firstItem="p7Z-HW-ZAi" firstAttribute="top" secondItem="TpC-VR-acE" secondAttribute="bottom" constant="374" id="JTh-Ph-ulL">
                                 <variation key="widthClass=compact" constant="328"/>
                             </constraint>
                             <constraint firstItem="EZb-gn-cQB" firstAttribute="trailing" secondItem="IkB-s3-Yx4" secondAttribute="trailing" id="L3b-Dn-bSj"/>
-                            <constraint firstItem="IkB-s3-Yx4" firstAttribute="top" secondItem="exA-K5-jMX" secondAttribute="bottom" id="LbX-zV-Z79"/>
+                            <constraint firstItem="IkB-s3-Yx4" firstAttribute="top" secondItem="exA-K5-jMX" secondAttribute="bottom" id="LbX-zV-Z79">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="1nF-xN-VWA" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leadingMargin" constant="-15" id="P4l-2Z-7yE">
+                                <variation key="widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="1nF-xN-VWA" firstAttribute="top" secondItem="EV8-GM-gxT" secondAttribute="bottom" id="PKS-qK-Cp1">
+                                <variation key="widthClass=compact" constant="87"/>
+                            </constraint>
                             <constraint firstItem="EZb-gn-cQB" firstAttribute="leading" secondItem="IkB-s3-Yx4" secondAttribute="leading" id="Qfw-oW-Xyx"/>
                             <constraint firstItem="IkB-s3-Yx4" firstAttribute="top" secondItem="TpC-VR-acE" secondAttribute="bottom" constant="10" id="Rgh-Wb-L3m">
                                 <variation key="widthClass=compact" constant="60"/>
@@ -1180,6 +1263,9 @@ que vous avez reçu par SMS.</string>
                                 <variation key="widthClass=compact" constant="54"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="IkB-s3-Yx4" secondAttribute="trailing" id="gRe-C0-x5b"/>
+                            <constraint firstItem="1nF-xN-VWA" firstAttribute="trailing" secondItem="Fut-lP-OeV" secondAttribute="trailingMargin" constant="-15" id="nsu-G1-sRV">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="EV8-GM-gxT" firstAttribute="leading" secondItem="TpC-VR-acE" secondAttribute="leading" id="p0T-lx-XFm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TpC-VR-acE" secondAttribute="trailing" constant="10" id="sIc-jt-p1c">
                                 <variation key="widthClass=compact" constant="0.0"/>
@@ -1192,9 +1278,10 @@ que vous avez reçu par SMS.</string>
                             <mask key="subviews">
                                 <exclude reference="EV8-GM-gxT"/>
                                 <exclude reference="TpC-VR-acE"/>
-                                <exclude reference="exA-K5-jMX"/>
-                                <exclude reference="EZb-gn-cQB"/>
+                                <exclude reference="1nF-xN-VWA"/>
                                 <exclude reference="IkB-s3-Yx4"/>
+                                <exclude reference="EZb-gn-cQB"/>
+                                <exclude reference="exA-K5-jMX"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="8vN-xu-ppd"/>
@@ -1203,6 +1290,11 @@ que vous avez reçu par SMS.</string>
                                 <exclude reference="dSC-V8-dlA"/>
                                 <exclude reference="sIc-jt-p1c"/>
                                 <exclude reference="uQF-hk-VSf"/>
+                                <exclude reference="9me-IL-186"/>
+                                <exclude reference="Bdw-hU-39f"/>
+                                <exclude reference="P4l-2Z-7yE"/>
+                                <exclude reference="PKS-qK-Cp1"/>
+                                <exclude reference="nsu-G1-sRV"/>
                                 <exclude reference="4BL-Ue-zuW"/>
                                 <exclude reference="V0O-pm-MT8"/>
                                 <exclude reference="byk-in-HXo"/>
@@ -1210,6 +1302,7 @@ que vous avez reçu par SMS.</string>
                                 <exclude reference="LbX-zV-Z79"/>
                                 <exclude reference="Rgh-Wb-L3m"/>
                                 <exclude reference="gRe-C0-x5b"/>
+                                <exclude reference="BDi-MZ-Ozr"/>
                                 <exclude reference="L3b-Dn-bSj"/>
                                 <exclude reference="Qfw-oW-Xyx"/>
                                 <exclude reference="89T-zP-5cX"/>
@@ -1220,9 +1313,10 @@ que vous avez reçu par SMS.</string>
                             <mask key="subviews">
                                 <include reference="EV8-GM-gxT"/>
                                 <include reference="TpC-VR-acE"/>
-                                <include reference="exA-K5-jMX"/>
-                                <include reference="EZb-gn-cQB"/>
+                                <include reference="1nF-xN-VWA"/>
                                 <include reference="IkB-s3-Yx4"/>
+                                <include reference="EZb-gn-cQB"/>
+                                <include reference="exA-K5-jMX"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="8vN-xu-ppd"/>
@@ -1231,6 +1325,11 @@ que vous avez reçu par SMS.</string>
                                 <include reference="dSC-V8-dlA"/>
                                 <include reference="sIc-jt-p1c"/>
                                 <include reference="uQF-hk-VSf"/>
+                                <exclude reference="9me-IL-186"/>
+                                <exclude reference="Bdw-hU-39f"/>
+                                <include reference="P4l-2Z-7yE"/>
+                                <include reference="PKS-qK-Cp1"/>
+                                <include reference="nsu-G1-sRV"/>
                                 <include reference="4BL-Ue-zuW"/>
                                 <include reference="V0O-pm-MT8"/>
                                 <include reference="byk-in-HXo"/>
@@ -1238,6 +1337,7 @@ que vous avez reçu par SMS.</string>
                                 <include reference="LbX-zV-Z79"/>
                                 <exclude reference="Rgh-Wb-L3m"/>
                                 <include reference="gRe-C0-x5b"/>
+                                <exclude reference="BDi-MZ-Ozr"/>
                                 <include reference="L3b-Dn-bSj"/>
                                 <include reference="Qfw-oW-Xyx"/>
                                 <include reference="89T-zP-5cX"/>
