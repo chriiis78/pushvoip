@@ -23,6 +23,8 @@
 		6BD060E61D9A9C8D0040EED0 /* BSRegisterSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060E51D9A9C8D0040EED0 /* BSRegisterSecondViewController.m */; };
 		6BD060E91D9A9D8E0040EED0 /* BSRegisterThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060E81D9A9D8E0040EED0 /* BSRegisterThirdViewController.m */; };
 		6BE0E78D1D917DE900D38431 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B516F8E1D8AA36200D1A45A /* Interface.storyboard */; };
+		6BE2E39B1D9BF6B80013F20C /* BSRegisterFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2E39A1D9BF6B80013F20C /* BSRegisterFourthViewController.m */; };
+		6BE2E39E1D9BF6F20013F20C /* BSRegisterFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2E39D1D9BF6F20013F20C /* BSRegisterFifthViewController.m */; };
 		FC4E831D1D76C1A800D9D5BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831C1D76C1A800D9D5BC /* main.m */; };
 		FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */; };
 		FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83221D76C1A800D9D5BC /* ViewController.m */; };
@@ -119,6 +121,10 @@
 		6BD060E51D9A9C8D0040EED0 /* BSRegisterSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterSecondViewController.m; sourceTree = "<group>"; };
 		6BD060E71D9A9D8E0040EED0 /* BSRegisterThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterThirdViewController.h; sourceTree = "<group>"; };
 		6BD060E81D9A9D8E0040EED0 /* BSRegisterThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterThirdViewController.m; sourceTree = "<group>"; };
+		6BE2E3991D9BF6B80013F20C /* BSRegisterFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterFourthViewController.h; sourceTree = "<group>"; };
+		6BE2E39A1D9BF6B80013F20C /* BSRegisterFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterFourthViewController.m; sourceTree = "<group>"; };
+		6BE2E39C1D9BF6F20013F20C /* BSRegisterFifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterFifthViewController.h; sourceTree = "<group>"; };
+		6BE2E39D1D9BF6F20013F20C /* BSRegisterFifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterFifthViewController.m; sourceTree = "<group>"; };
 		FC4E83181D76C1A700D9D5BC /* pushvoip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushvoip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4E831C1D76C1A800D9D5BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC4E831E1D76C1A800D9D5BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -252,6 +258,10 @@
 				6BD060E51D9A9C8D0040EED0 /* BSRegisterSecondViewController.m */,
 				6BD060E71D9A9D8E0040EED0 /* BSRegisterThirdViewController.h */,
 				6BD060E81D9A9D8E0040EED0 /* BSRegisterThirdViewController.m */,
+				6BE2E3991D9BF6B80013F20C /* BSRegisterFourthViewController.h */,
+				6BE2E39A1D9BF6B80013F20C /* BSRegisterFourthViewController.m */,
+				6BE2E39C1D9BF6F20013F20C /* BSRegisterFifthViewController.h */,
+				6BE2E39D1D9BF6F20013F20C /* BSRegisterFifthViewController.m */,
 				6BD060DE1D9A78920040EED0 /* BSRegisterNavigationController.h */,
 				6BD060DF1D9A78920040EED0 /* BSRegisterNavigationController.m */,
 				FC4E83241D76C1A800D9D5BC /* Main.storyboard */,
@@ -503,6 +513,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE2E39E1D9BF6F20013F20C /* BSRegisterFifthViewController.m in Sources */,
+				6BE2E39B1D9BF6B80013F20C /* BSRegisterFourthViewController.m in Sources */,
 				6BD060E91D9A9D8E0040EED0 /* BSRegisterThirdViewController.m in Sources */,
 				FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */,
 				6BD060E31D9A7CCE0040EED0 /* BSRegisterFirstViewController.m in Sources */,
