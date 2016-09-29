@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +31,7 @@
                                     <action selector="startLocalNotification" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xA-vF-O3Y"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zkY-Ac-KNr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zkY-Ac-KNr">
                                 <rect key="frame" x="20" y="20" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -86,15 +87,15 @@
                                 <exclude reference="trF-9Z-EnR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="HSo-rL-hbv"/>
-                                <exclude reference="TcC-7I-QWN"/>
-                                <exclude reference="Uot-Fs-xvQ"/>
-                                <exclude reference="liz-cl-lHw"/>
                                 <exclude reference="AHs-GG-uR5"/>
                                 <exclude reference="ILi-kT-kL8"/>
                                 <exclude reference="Nel-1G-JBT"/>
                                 <exclude reference="V6n-gD-Egm"/>
                                 <exclude reference="lMn-xY-NYh"/>
+                                <exclude reference="HSo-rL-hbv"/>
+                                <exclude reference="TcC-7I-QWN"/>
+                                <exclude reference="Uot-Fs-xvQ"/>
+                                <exclude reference="liz-cl-lHw"/>
                                 <exclude reference="Hvb-Ic-fCT"/>
                                 <exclude reference="bwN-69-uq3"/>
                             </mask>
@@ -104,15 +105,15 @@
                                 <include reference="trF-9Z-EnR"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="HSo-rL-hbv"/>
-                                <include reference="TcC-7I-QWN"/>
-                                <include reference="Uot-Fs-xvQ"/>
-                                <include reference="liz-cl-lHw"/>
                                 <include reference="AHs-GG-uR5"/>
                                 <include reference="ILi-kT-kL8"/>
                                 <include reference="Nel-1G-JBT"/>
                                 <include reference="V6n-gD-Egm"/>
                                 <include reference="lMn-xY-NYh"/>
+                                <include reference="HSo-rL-hbv"/>
+                                <include reference="TcC-7I-QWN"/>
+                                <include reference="Uot-Fs-xvQ"/>
+                                <include reference="liz-cl-lHw"/>
                                 <exclude reference="Hvb-Ic-fCT"/>
                                 <include reference="bwN-69-uq3"/>
                             </mask>
@@ -245,7 +246,7 @@ votre numéro de téléphone.</string>
                                                             </constraint>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
                                                         <state key="normal" title="Pays"/>
@@ -369,14 +370,14 @@ votre numéro de téléphone.</string>
                                 <exclude reference="Qsp-0M-K0I"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="AiA-TI-gnQ"/>
-                                <exclude reference="Eb5-zc-7GF"/>
-                                <exclude reference="q3o-1V-qCE"/>
                                 <exclude reference="7QL-Un-JN9"/>
                                 <exclude reference="g6A-le-OCq"/>
                                 <exclude reference="gR1-3V-yh0"/>
                                 <exclude reference="n0J-Rm-cD6"/>
                                 <exclude reference="vE3-zA-YP6"/>
+                                <exclude reference="AiA-TI-gnQ"/>
+                                <exclude reference="Eb5-zc-7GF"/>
+                                <exclude reference="q3o-1V-qCE"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -385,14 +386,14 @@ votre numéro de téléphone.</string>
                                 <include reference="Qsp-0M-K0I"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="AiA-TI-gnQ"/>
-                                <include reference="Eb5-zc-7GF"/>
-                                <include reference="q3o-1V-qCE"/>
                                 <include reference="7QL-Un-JN9"/>
                                 <include reference="g6A-le-OCq"/>
                                 <exclude reference="gR1-3V-yh0"/>
                                 <include reference="n0J-Rm-cD6"/>
                                 <include reference="vE3-zA-YP6"/>
+                                <include reference="AiA-TI-gnQ"/>
+                                <include reference="Eb5-zc-7GF"/>
+                                <include reference="q3o-1V-qCE"/>
                             </mask>
                         </variation>
                     </view>
@@ -409,12 +410,15 @@ votre numéro de téléphone.</string>
             <objects>
                 <tableViewController id="Obh-aw-zyS" customClass="BSRegisterFirstCountryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Eek-Rf-dKB">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="iUS-A6-aTt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="Cell" id="iUS-A6-aTt">
+                                <rect key="frame" x="0.0" y="92" width="400" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iUS-A6-aTt" id="Pw4-Tk-BYY">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -540,12 +544,12 @@ que vous avez reçu par SMS.</string>
                                 <exclude reference="0rt-G4-5iu"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Bob-uQ-MXU"/>
-                                <exclude reference="Nn5-h0-9gZ"/>
-                                <exclude reference="v8W-uU-nX8"/>
                                 <exclude reference="5mA-5D-0RM"/>
                                 <exclude reference="XKh-Io-Quo"/>
                                 <exclude reference="gO9-sv-gOg"/>
+                                <exclude reference="Bob-uQ-MXU"/>
+                                <exclude reference="Nn5-h0-9gZ"/>
+                                <exclude reference="v8W-uU-nX8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -554,12 +558,12 @@ que vous avez reçu par SMS.</string>
                                 <include reference="0rt-G4-5iu"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Bob-uQ-MXU"/>
-                                <include reference="Nn5-h0-9gZ"/>
-                                <include reference="v8W-uU-nX8"/>
                                 <include reference="5mA-5D-0RM"/>
                                 <include reference="XKh-Io-Quo"/>
                                 <include reference="gO9-sv-gOg"/>
+                                <include reference="Bob-uQ-MXU"/>
+                                <include reference="Nn5-h0-9gZ"/>
+                                <include reference="v8W-uU-nX8"/>
                             </mask>
                         </variation>
                     </view>
@@ -575,101 +579,206 @@ que vous avez reçu par SMS.</string>
             <objects>
                 <viewController id="rm7-bG-XDA" customClass="BSRegisterThirdViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HJj-5T-M7K"/>
-                        <viewControllerLayoutGuide type="bottom" id="dg1-gY-27K"/>
+                        <viewControllerLayoutGuide type="top" id="6lb-0d-JFF"/>
+                        <viewControllerLayoutGuide type="bottom" id="YwS-bo-R2g"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VaT-bp-xRs">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="6lD-rH-NV1">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCE-wb-Th2">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Voir les conditions générales d'utilisation"/>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Cliquez sur Continuer pour accepter les conditions d'utilisation du Bon Samaritain." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7tE-lQ-cK6">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAo-6I-lb7">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.00032368686330000001" green="0.6997300393" blue="0.23112587279999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dM5-5D-K8f">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgH-GO-nps">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRA-BF-lB3">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                </variation>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dO0-qN-KBx">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Dsy-bv-pSY"/>
+                                                </constraints>
+                                                <state key="normal" title="J'ai lu et j'accepte les conditions générales d'utilisation"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Dsy-bv-pSY"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Dsy-bv-pSY"/>
+                                                    </mask>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2K-aF-STk">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <color key="backgroundColor" red="0.00032368686330000001" green="0.6997300393" blue="0.23112587279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="IUa-2x-aVa"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Continuer">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="IUa-2x-aVa"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="IUa-2x-aVa"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="Xww-S2-YBA" kind="show" id="iMk-AH-Yba"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="dO0-qN-KBx" firstAttribute="leading" secondItem="FgH-GO-nps" secondAttribute="leading" id="1dh-yk-vWq"/>
+                                            <constraint firstItem="DRA-BF-lB3" firstAttribute="top" secondItem="FgH-GO-nps" secondAttribute="top" id="3fY-fW-9Cp"/>
+                                            <constraint firstItem="N2K-aF-STk" firstAttribute="top" secondItem="dO0-qN-KBx" secondAttribute="bottom" constant="14" id="Gf0-K1-X47">
+                                                <variation key="widthClass=compact" constant="8"/>
+                                            </constraint>
+                                            <constraint firstItem="DRA-BF-lB3" firstAttribute="leading" secondItem="FgH-GO-nps" secondAttribute="leading" id="S6l-PW-ZuT"/>
+                                            <constraint firstItem="dO0-qN-KBx" firstAttribute="leading" secondItem="DRA-BF-lB3" secondAttribute="leading" id="SMN-KC-msq"/>
+                                            <constraint firstItem="dO0-qN-KBx" firstAttribute="leading" secondItem="N2K-aF-STk" secondAttribute="leading" id="T6H-u8-xQe"/>
+                                            <constraint firstAttribute="trailing" secondItem="DRA-BF-lB3" secondAttribute="trailing" id="YxM-FI-ZyE"/>
+                                            <constraint firstItem="dO0-qN-KBx" firstAttribute="trailing" secondItem="N2K-aF-STk" secondAttribute="trailing" id="ZvX-4J-V4R"/>
+                                            <constraint firstAttribute="trailing" secondItem="dO0-qN-KBx" secondAttribute="trailing" id="jB4-m3-OuS"/>
+                                            <constraint firstItem="dO0-qN-KBx" firstAttribute="top" secondItem="DRA-BF-lB3" secondAttribute="bottom" constant="8" id="jCo-Dy-yDB"/>
+                                            <constraint firstAttribute="trailing" secondItem="N2K-aF-STk" secondAttribute="trailing" id="miR-UI-T4R"/>
+                                            <constraint firstItem="N2K-aF-STk" firstAttribute="leading" secondItem="FgH-GO-nps" secondAttribute="leading" id="qCL-L3-J7Q"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="DRA-BF-lB3"/>
+                                                <exclude reference="dO0-qN-KBx"/>
+                                                <exclude reference="N2K-aF-STk"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="3fY-fW-9Cp"/>
+                                                <exclude reference="S6l-PW-ZuT"/>
+                                                <exclude reference="YxM-FI-ZyE"/>
+                                                <exclude reference="1dh-yk-vWq"/>
+                                                <exclude reference="SMN-KC-msq"/>
+                                                <exclude reference="T6H-u8-xQe"/>
+                                                <exclude reference="ZvX-4J-V4R"/>
+                                                <exclude reference="jB4-m3-OuS"/>
+                                                <exclude reference="jCo-Dy-yDB"/>
+                                                <exclude reference="Gf0-K1-X47"/>
+                                                <exclude reference="miR-UI-T4R"/>
+                                                <exclude reference="qCL-L3-J7Q"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="DRA-BF-lB3"/>
+                                                <include reference="dO0-qN-KBx"/>
+                                                <include reference="N2K-aF-STk"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="3fY-fW-9Cp"/>
+                                                <include reference="S6l-PW-ZuT"/>
+                                                <include reference="YxM-FI-ZyE"/>
+                                                <include reference="1dh-yk-vWq"/>
+                                                <include reference="SMN-KC-msq"/>
+                                                <include reference="T6H-u8-xQe"/>
+                                                <include reference="ZvX-4J-V4R"/>
+                                                <include reference="jB4-m3-OuS"/>
+                                                <include reference="jCo-Dy-yDB"/>
+                                                <include reference="Gf0-K1-X47"/>
+                                                <include reference="miR-UI-T4R"/>
+                                                <include reference="qCL-L3-J7Q"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="wY6-JI-7RY"/>
+                                    <constraint firstItem="FgH-GO-nps" firstAttribute="centerY" secondItem="dM5-5D-K8f" secondAttribute="centerY" id="Be1-OF-oex">
+                                        <variation key="widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstItem="FgH-GO-nps" firstAttribute="top" secondItem="dM5-5D-K8f" secondAttribute="top" id="H40-ZP-8ld">
+                                        <variation key="widthClass=compact" constant="64"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="FgH-GO-nps" secondAttribute="trailing" id="iYt-gl-Phn"/>
+                                    <constraint firstItem="FgH-GO-nps" firstAttribute="centerX" secondItem="dM5-5D-K8f" secondAttribute="centerX" id="iiL-B6-TKr"/>
+                                    <constraint firstAttribute="bottom" secondItem="FgH-GO-nps" secondAttribute="bottom" id="k0f-S1-jCM">
+                                        <variation key="widthClass=compact" constant="300"/>
+                                    </constraint>
+                                    <constraint firstItem="FgH-GO-nps" firstAttribute="leading" secondItem="dM5-5D-K8f" secondAttribute="leading" id="vfa-p0-Pgx"/>
                                 </constraints>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Continuer">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="FgH-GO-nps"/>
+                                    </mask>
                                     <mask key="constraints">
-                                        <exclude reference="wY6-JI-7RY"/>
+                                        <exclude reference="Be1-OF-oex"/>
+                                        <exclude reference="H40-ZP-8ld"/>
+                                        <exclude reference="iYt-gl-Phn"/>
+                                        <exclude reference="iiL-B6-TKr"/>
+                                        <exclude reference="k0f-S1-jCM"/>
+                                        <exclude reference="vfa-p0-Pgx"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="FgH-GO-nps"/>
+                                    </mask>
                                     <mask key="constraints">
-                                        <include reference="wY6-JI-7RY"/>
+                                        <include reference="Be1-OF-oex"/>
+                                        <include reference="H40-ZP-8ld"/>
+                                        <include reference="iYt-gl-Phn"/>
+                                        <include reference="iiL-B6-TKr"/>
+                                        <include reference="k0f-S1-jCM"/>
+                                        <include reference="vfa-p0-Pgx"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <segue destination="Xww-S2-YBA" kind="show" id="WUr-hh-kmf"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7tE-lQ-cK6" firstAttribute="centerY" secondItem="VaT-bp-xRs" secondAttribute="centerY" id="0Ai-xJ-pFJ"/>
-                            <constraint firstItem="lAo-6I-lb7" firstAttribute="leading" secondItem="7tE-lQ-cK6" secondAttribute="leading" id="2fN-9f-rcr"/>
-                            <constraint firstItem="zCE-wb-Th2" firstAttribute="top" secondItem="7tE-lQ-cK6" secondAttribute="bottom" constant="8" symbolic="YES" id="8Gq-di-7ol"/>
-                            <constraint firstItem="7tE-lQ-cK6" firstAttribute="leading" secondItem="VaT-bp-xRs" secondAttribute="leadingMargin" constant="60" id="EFx-1n-CKt" userLabel="Text View.leading = leadingMargin">
-                                <variation key="widthClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="7tE-lQ-cK6" firstAttribute="centerX" secondItem="VaT-bp-xRs" secondAttribute="centerX" id="Oea-h5-dAd"/>
-                            <constraint firstItem="7tE-lQ-cK6" firstAttribute="centerX" secondItem="zCE-wb-Th2" secondAttribute="centerX" id="eXY-sc-xbS"/>
-                            <constraint firstItem="lAo-6I-lb7" firstAttribute="top" secondItem="zCE-wb-Th2" secondAttribute="bottom" constant="27" id="kgU-uW-hAo"/>
-                            <constraint firstItem="dg1-gY-27K" firstAttribute="top" secondItem="lAo-6I-lb7" secondAttribute="bottom" constant="104" id="qZO-Ut-OYY"/>
-                            <constraint firstItem="lAo-6I-lb7" firstAttribute="trailing" secondItem="7tE-lQ-cK6" secondAttribute="trailing" id="yLM-5j-dN1"/>
+                            <constraint firstItem="dM5-5D-K8f" firstAttribute="top" secondItem="6lD-rH-NV1" secondAttribute="top" id="CAJ-C8-H7V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dM5-5D-K8f" secondAttribute="trailing" id="i9V-8T-gBr"/>
+                            <constraint firstAttribute="bottom" secondItem="dM5-5D-K8f" secondAttribute="bottom" id="kBL-K4-YeI"/>
+                            <constraint firstItem="dM5-5D-K8f" firstAttribute="leading" secondItem="6lD-rH-NV1" secondAttribute="leadingMargin" id="rfX-rX-zeU"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="zCE-wb-Th2"/>
-                                <exclude reference="7tE-lQ-cK6"/>
-                                <exclude reference="lAo-6I-lb7"/>
+                                <exclude reference="dM5-5D-K8f"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="qZO-Ut-OYY"/>
-                                <exclude reference="2fN-9f-rcr"/>
-                                <exclude reference="kgU-uW-hAo"/>
-                                <exclude reference="yLM-5j-dN1"/>
-                                <exclude reference="8Gq-di-7ol"/>
-                                <exclude reference="0Ai-xJ-pFJ"/>
-                                <exclude reference="EFx-1n-CKt"/>
-                                <exclude reference="Oea-h5-dAd"/>
-                                <exclude reference="eXY-sc-xbS"/>
+                                <exclude reference="CAJ-C8-H7V"/>
+                                <exclude reference="i9V-8T-gBr"/>
+                                <exclude reference="kBL-K4-YeI"/>
+                                <exclude reference="rfX-rX-zeU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="zCE-wb-Th2"/>
-                                <include reference="7tE-lQ-cK6"/>
-                                <include reference="lAo-6I-lb7"/>
+                                <include reference="dM5-5D-K8f"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="qZO-Ut-OYY"/>
-                                <include reference="2fN-9f-rcr"/>
-                                <include reference="kgU-uW-hAo"/>
-                                <include reference="yLM-5j-dN1"/>
-                                <include reference="8Gq-di-7ol"/>
-                                <include reference="0Ai-xJ-pFJ"/>
-                                <include reference="EFx-1n-CKt"/>
-                                <include reference="Oea-h5-dAd"/>
-                                <include reference="eXY-sc-xbS"/>
+                                <include reference="CAJ-C8-H7V"/>
+                                <include reference="i9V-8T-gBr"/>
+                                <include reference="kBL-K4-YeI"/>
+                                <include reference="rfX-rX-zeU"/>
                             </mask>
                         </variation>
                     </view>
@@ -687,7 +796,7 @@ que vous avez reçu par SMS.</string>
                         <viewControllerLayoutGuide type="bottom" id="isB-PR-2MC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YPf-ee-dqb">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Merci de saisir vos informations." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDi-zy-EYA">
@@ -720,7 +829,7 @@ que vous avez reçu par SMS.</string>
                                             <constraint firstAttribute="height" constant="30" id="JWd-RQ-Gwd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -733,12 +842,13 @@ que vous avez reçu par SMS.</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2de-zv-Rj2">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="2de-zv-Rj2">
                                         <rect key="frame" x="-60" y="-14" width="121" height="29"/>
                                         <segments>
                                             <segment title="Homme"/>
                                             <segment title="Femme"/>
                                         </segments>
+                                        <color key="tintColor" red="0.00032368686330000001" green="0.6997300393" blue="0.23112587279999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
@@ -916,19 +1026,6 @@ que vous avez reçu par SMS.</string>
                                 <exclude reference="Y8P-zr-kHj"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6oC-8g-QX9"/>
-                                <exclude reference="PxV-2F-a68"/>
-                                <exclude reference="cel-ds-ghf"/>
-                                <exclude reference="rfl-sJ-s5s"/>
-                                <exclude reference="tui-ww-9fd"/>
-                                <exclude reference="3tf-N9-0p1"/>
-                                <exclude reference="5Vo-4Z-wdG"/>
-                                <exclude reference="H7V-DD-La1"/>
-                                <exclude reference="UlV-1T-EVi"/>
-                                <exclude reference="hwh-Mi-u39"/>
-                                <exclude reference="nj2-hE-dWa"/>
-                                <exclude reference="iag-24-PaG"/>
-                                <exclude reference="BtN-ZD-tlY"/>
                                 <exclude reference="446-0m-Y40"/>
                                 <exclude reference="FI4-jI-kqC"/>
                                 <exclude reference="Fn6-ig-UnR"/>
@@ -939,8 +1036,21 @@ que vous avez reçu par SMS.</string>
                                 <exclude reference="tv1-PL-f2P"/>
                                 <exclude reference="uFY-r7-PT7"/>
                                 <exclude reference="ybX-iW-qA6"/>
+                                <exclude reference="BtN-ZD-tlY"/>
                                 <exclude reference="TiH-go-oZT"/>
+                                <exclude reference="iag-24-PaG"/>
                                 <exclude reference="OaQ-FW-ZYe"/>
+                                <exclude reference="3tf-N9-0p1"/>
+                                <exclude reference="5Vo-4Z-wdG"/>
+                                <exclude reference="H7V-DD-La1"/>
+                                <exclude reference="UlV-1T-EVi"/>
+                                <exclude reference="hwh-Mi-u39"/>
+                                <exclude reference="nj2-hE-dWa"/>
+                                <exclude reference="6oC-8g-QX9"/>
+                                <exclude reference="PxV-2F-a68"/>
+                                <exclude reference="cel-ds-ghf"/>
+                                <exclude reference="rfl-sJ-s5s"/>
+                                <exclude reference="tui-ww-9fd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -954,19 +1064,6 @@ que vous avez reçu par SMS.</string>
                                 <include reference="Y8P-zr-kHj"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="6oC-8g-QX9"/>
-                                <include reference="PxV-2F-a68"/>
-                                <include reference="cel-ds-ghf"/>
-                                <include reference="rfl-sJ-s5s"/>
-                                <include reference="tui-ww-9fd"/>
-                                <include reference="3tf-N9-0p1"/>
-                                <include reference="5Vo-4Z-wdG"/>
-                                <include reference="H7V-DD-La1"/>
-                                <exclude reference="UlV-1T-EVi"/>
-                                <exclude reference="hwh-Mi-u39"/>
-                                <include reference="nj2-hE-dWa"/>
-                                <include reference="iag-24-PaG"/>
-                                <include reference="BtN-ZD-tlY"/>
                                 <include reference="446-0m-Y40"/>
                                 <include reference="FI4-jI-kqC"/>
                                 <include reference="Fn6-ig-UnR"/>
@@ -977,8 +1074,21 @@ que vous avez reçu par SMS.</string>
                                 <include reference="tv1-PL-f2P"/>
                                 <exclude reference="uFY-r7-PT7"/>
                                 <include reference="ybX-iW-qA6"/>
+                                <include reference="BtN-ZD-tlY"/>
                                 <include reference="TiH-go-oZT"/>
+                                <include reference="iag-24-PaG"/>
                                 <include reference="OaQ-FW-ZYe"/>
+                                <include reference="3tf-N9-0p1"/>
+                                <include reference="5Vo-4Z-wdG"/>
+                                <include reference="H7V-DD-La1"/>
+                                <exclude reference="UlV-1T-EVi"/>
+                                <exclude reference="hwh-Mi-u39"/>
+                                <include reference="nj2-hE-dWa"/>
+                                <include reference="6oC-8g-QX9"/>
+                                <include reference="PxV-2F-a68"/>
+                                <include reference="cel-ds-ghf"/>
+                                <include reference="rfl-sJ-s5s"/>
+                                <include reference="tui-ww-9fd"/>
                             </mask>
                         </variation>
                     </view>
@@ -996,6 +1106,7 @@ que vous avez reçu par SMS.</string>
                         <viewControllerLayoutGuide type="bottom" id="p7Z-HW-ZAi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fut-lP-OeV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Merci de joindre un justificatif." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV8-GM-gxT">
@@ -1109,18 +1220,18 @@ que vous avez reçu par SMS.</string>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="3Dg-Ac-Jq5"/>
                                                 <exclude reference="5KM-91-K3q"/>
                                                 <exclude reference="Cp7-PL-GFZ"/>
                                                 <exclude reference="Un7-Wm-Dgl"/>
-                                                <exclude reference="3Dg-Ac-Jq5"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="constraints">
+                                                <exclude reference="3Dg-Ac-Jq5"/>
                                                 <include reference="5KM-91-K3q"/>
                                                 <include reference="Cp7-PL-GFZ"/>
                                                 <include reference="Un7-Wm-Dgl"/>
-                                                <exclude reference="3Dg-Ac-Jq5"/>
                                             </mask>
                                         </variation>
                                     </stackView>
@@ -1157,6 +1268,41 @@ que vous avez reçu par SMS.</string>
                                     <!--2016-09-28 10:20:39 +0000-->
                                 </date>
                             </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="exA-K5-jMX">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de fin de validité" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YI9-gL-l0k">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(si indiqué)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWs-8z-Sn5">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yU-BZ-mW1">
+                                        <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5zY-RE-zvz">
+                                        <variation key="widthClass=compact" constant="31"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5zY-RE-zvz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5zY-RE-zvz"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZb-gn-cQB">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.00032368686330000001" green="0.6997300393" blue="0.23112587279999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1186,41 +1332,6 @@ que vous avez reçu par SMS.</string>
                                     <action selector="btnFinishOnClick:" destination="XKr-Bf-rp1" eventType="touchUpInside" id="UEj-tc-eNt"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="exA-K5-jMX">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de fin de validité" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YI9-gL-l0k">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(si indiqué)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWs-8z-Sn5">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yU-BZ-mW1">
-                                        <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                    </switch>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="5zY-RE-zvz">
-                                        <variation key="widthClass=compact" constant="31"/>
-                                    </constraint>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="5zY-RE-zvz"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="5zY-RE-zvz"/>
-                                    </mask>
-                                </variation>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1280,33 +1391,33 @@ que vous avez reçu par SMS.</string>
                                 <exclude reference="TpC-VR-acE"/>
                                 <exclude reference="1nF-xN-VWA"/>
                                 <exclude reference="IkB-s3-Yx4"/>
-                                <exclude reference="EZb-gn-cQB"/>
                                 <exclude reference="exA-K5-jMX"/>
+                                <exclude reference="EZb-gn-cQB"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8vN-xu-ppd"/>
-                                <exclude reference="8xN-5x-tQo"/>
-                                <exclude reference="p0T-lx-XFm"/>
+                                <exclude reference="89T-zP-5cX"/>
+                                <exclude reference="JTh-Ph-ulL"/>
+                                <exclude reference="BDi-MZ-Ozr"/>
+                                <exclude reference="L3b-Dn-bSj"/>
+                                <exclude reference="Qfw-oW-Xyx"/>
                                 <exclude reference="dSC-V8-dlA"/>
                                 <exclude reference="sIc-jt-p1c"/>
                                 <exclude reference="uQF-hk-VSf"/>
+                                <exclude reference="4BL-Ue-zuW"/>
+                                <exclude reference="V0O-pm-MT8"/>
+                                <exclude reference="byk-in-HXo"/>
                                 <exclude reference="9me-IL-186"/>
                                 <exclude reference="Bdw-hU-39f"/>
                                 <exclude reference="P4l-2Z-7yE"/>
                                 <exclude reference="PKS-qK-Cp1"/>
                                 <exclude reference="nsu-G1-sRV"/>
-                                <exclude reference="4BL-Ue-zuW"/>
-                                <exclude reference="V0O-pm-MT8"/>
-                                <exclude reference="byk-in-HXo"/>
+                                <exclude reference="8vN-xu-ppd"/>
+                                <exclude reference="8xN-5x-tQo"/>
+                                <exclude reference="p0T-lx-XFm"/>
                                 <exclude reference="F9J-Ck-vcT"/>
                                 <exclude reference="LbX-zV-Z79"/>
                                 <exclude reference="Rgh-Wb-L3m"/>
                                 <exclude reference="gRe-C0-x5b"/>
-                                <exclude reference="BDi-MZ-Ozr"/>
-                                <exclude reference="L3b-Dn-bSj"/>
-                                <exclude reference="Qfw-oW-Xyx"/>
-                                <exclude reference="89T-zP-5cX"/>
-                                <exclude reference="JTh-Ph-ulL"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1315,33 +1426,33 @@ que vous avez reçu par SMS.</string>
                                 <include reference="TpC-VR-acE"/>
                                 <include reference="1nF-xN-VWA"/>
                                 <include reference="IkB-s3-Yx4"/>
-                                <include reference="EZb-gn-cQB"/>
                                 <include reference="exA-K5-jMX"/>
+                                <include reference="EZb-gn-cQB"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8vN-xu-ppd"/>
-                                <include reference="8xN-5x-tQo"/>
-                                <include reference="p0T-lx-XFm"/>
+                                <include reference="89T-zP-5cX"/>
+                                <exclude reference="JTh-Ph-ulL"/>
+                                <exclude reference="BDi-MZ-Ozr"/>
+                                <include reference="L3b-Dn-bSj"/>
+                                <include reference="Qfw-oW-Xyx"/>
                                 <include reference="dSC-V8-dlA"/>
                                 <include reference="sIc-jt-p1c"/>
                                 <include reference="uQF-hk-VSf"/>
+                                <include reference="4BL-Ue-zuW"/>
+                                <include reference="V0O-pm-MT8"/>
+                                <include reference="byk-in-HXo"/>
                                 <exclude reference="9me-IL-186"/>
                                 <exclude reference="Bdw-hU-39f"/>
                                 <include reference="P4l-2Z-7yE"/>
                                 <include reference="PKS-qK-Cp1"/>
                                 <include reference="nsu-G1-sRV"/>
-                                <include reference="4BL-Ue-zuW"/>
-                                <include reference="V0O-pm-MT8"/>
-                                <include reference="byk-in-HXo"/>
+                                <include reference="8vN-xu-ppd"/>
+                                <include reference="8xN-5x-tQo"/>
+                                <include reference="p0T-lx-XFm"/>
                                 <include reference="F9J-Ck-vcT"/>
                                 <include reference="LbX-zV-Z79"/>
                                 <exclude reference="Rgh-Wb-L3m"/>
                                 <include reference="gRe-C0-x5b"/>
-                                <exclude reference="BDi-MZ-Ozr"/>
-                                <include reference="L3b-Dn-bSj"/>
-                                <include reference="Qfw-oW-Xyx"/>
-                                <include reference="89T-zP-5cX"/>
-                                <exclude reference="JTh-Ph-ulL"/>
                             </mask>
                         </variation>
                     </view>
