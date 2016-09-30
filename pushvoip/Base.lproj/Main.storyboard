@@ -401,6 +401,7 @@ votre numéro de téléphone.</string>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="600"/>
                     <connections>
+                        <outlet property="countryFlag" destination="BEC-G1-SCX" id="uSd-hQ-Dwk"/>
                         <outlet property="countryName" destination="tcw-q4-wM6" id="ESe-3x-Qzc"/>
                     </connections>
                 </viewController>

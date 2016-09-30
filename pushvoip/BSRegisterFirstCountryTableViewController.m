@@ -81,7 +81,9 @@
     NSString *animal = [sectionAnimals objectAtIndex:indexPath.row];
     cell.textLabel.text = animal;
     cell.imageView.image = [UIImage imageNamed:[self getImageFilename:animal]];
-    if (self->countrySelected != nil &&  indexPath.section == self->countrySelected.section && indexPath.row == self->countrySelected.row){
+    
+    // Ca marche pas encore, faut que je trouve comment avoir le countrySelected, NSUserDefaults ?
+    if (self->countrySelected != nil && indexPath.section == self->countrySelected.section && indexPath.row == self->countrySelected.row){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     return cell;
@@ -114,6 +116,7 @@
     NSIndexPath *selectedPath = [self.tableView indexPathForCell:sender];
     
     [vca.countryName setTitle: [self.tableView cellForRowAtIndexPath:selectedPath].textLabel.text forState:UIControlStateNormal];
+    [vca.countryFlag setImage: [self.tableView cellForRowAtIndexPath:selectedPath].imageView.image];
 }
 
 @end

@@ -11,6 +11,7 @@
 @implementation BSRegisterFirstViewController
 
 @synthesize countryName;
+@synthesize countryFlag;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
