@@ -20,13 +20,10 @@
     UIBarButtonItem *btnLogout = [[UIBarButtonItem alloc]initWithTitle:@"Annuler" style:UIBarButtonItemStyleDone target:self action:@selector(btnOnClick:)];
     self.navigationItem.leftBarButtonItem = btnLogout;
     
-    if ([countryName.titleLabel.text isEqualToString:@"Pays"]){
-        NSLocale *currentLocale = [NSLocale currentLocale];
-        NSString *countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
-        NSString *country = [[NSLocale systemLocale] displayNameForKey:NSLocaleCountryCode value:countryCode];
-        [countryName setTitle: country forState:UIControlStateNormal];
-    }
-    
+    NSLocale *currentLocale = [NSLocale currentLocale];
+    NSString *countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
+    NSString *country = [[NSLocale systemLocale] displayNameForKey:NSLocaleCountryCode value:countryCode];
+    [countryName setTitle: country forState:UIControlStateNormal];
 }
 
 -(void)btnOnClick:(id)sender
