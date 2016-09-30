@@ -10,4 +10,5 @@
 #import "BSRegisterFirstViewController.h"
 
 @interface BSRegisterFirstViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *countryName;
 @end

@@ -7,11 +7,13 @@
 //
 
 #import "BSRegisterFirstCountryTableViewController.h"
+#import "BSRegisterFirstViewController.h"
 
 @interface BSRegisterFirstCountryTableViewController () {
     NSDictionary *animals;
     NSArray *animalSectionTitles;
     NSArray *animalIndexTitles;
+    NSIndexPath *countrySelected;
 }
 @end
 
@@ -79,7 +81,9 @@
     NSString *animal = [sectionAnimals objectAtIndex:indexPath.row];
     cell.textLabel.text = animal;
     cell.imageView.image = [UIImage imageNamed:[self getImageFilename:animal]];
-    
+    if (self->countrySelected != nil &&  indexPath.section == self->countrySelected.section && indexPath.row == self->countrySelected.row){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
     return cell;
 }
 
@@ -91,6 +95,25 @@
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
     return [animalSectionTitles indexOfObject:title];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self->countrySelected = indexPath;
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell.accessoryType == UITableViewCellAccessoryNone){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender{
+    BSRegisterFirstViewController *vca = (BSRegisterFirstViewController *)segue.destinationViewController;
+    NSIndexPath *selectedPath = [self.tableView indexPathForCell:sender];
+    
+    [vca.countryName setTitle: [self.tableView cellForRowAtIndexPath:selectedPath].textLabel.text forState:UIControlStateNormal];
 }
 
 @end
