@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BSRegisterFirstCountryTableViewController : UITableViewController
-
+@property NSString *countrySelected;
 @end
