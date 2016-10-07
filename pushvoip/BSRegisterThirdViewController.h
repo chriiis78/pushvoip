@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BSRegisterThirdViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *checkButton;
+@property (weak, nonatomic) IBOutlet UIButton *continueButton;
 
 @end

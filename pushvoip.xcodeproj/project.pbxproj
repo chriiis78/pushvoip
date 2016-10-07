@@ -213,6 +213,10 @@
 		6BC307F71DA4FA2B002A09E6 /* ZAF@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC307341DA4FA2B002A09E6 /* ZAF@2x.png */; };
 		6BC307F81DA4FA2B002A09E6 /* ZMB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC307351DA4FA2B002A09E6 /* ZMB@2x.png */; };
 		6BC307F91DA4FA2B002A09E6 /* ZWE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC307361DA4FA2B002A09E6 /* ZWE@2x.png */; };
+		6BCD1FA31DA6850100AC41E6 /* checkboxOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1F9F1DA6850100AC41E6 /* checkboxOff.png */; };
+		6BCD1FA41DA6850100AC41E6 /* checkboxOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1FA01DA6850100AC41E6 /* checkboxOff@2x.png */; };
+		6BCD1FA51DA6850100AC41E6 /* checkboxOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1FA11DA6850100AC41E6 /* checkboxOn.png */; };
+		6BCD1FA61DA6850100AC41E6 /* checkboxOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1FA21DA6850100AC41E6 /* checkboxOn@2x.png */; };
 		6BD060E01D9A78920040EED0 /* BSRegisterNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060DF1D9A78920040EED0 /* BSRegisterNavigationController.m */; };
 		6BD060E31D9A7CCE0040EED0 /* BSRegisterFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060E21D9A7CCE0040EED0 /* BSRegisterFirstViewController.m */; };
 		6BD060E61D9A9C8D0040EED0 /* BSRegisterSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060E51D9A9C8D0040EED0 /* BSRegisterSecondViewController.m */; };
@@ -507,6 +511,10 @@
 		6BC307341DA4FA2B002A09E6 /* ZAF@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZAF@2x.png"; sourceTree = "<group>"; };
 		6BC307351DA4FA2B002A09E6 /* ZMB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZMB@2x.png"; sourceTree = "<group>"; };
 		6BC307361DA4FA2B002A09E6 /* ZWE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZWE@2x.png"; sourceTree = "<group>"; };
+		6BCD1F9F1DA6850100AC41E6 /* checkboxOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxOff.png; sourceTree = "<group>"; };
+		6BCD1FA01DA6850100AC41E6 /* checkboxOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkboxOff@2x.png"; sourceTree = "<group>"; };
+		6BCD1FA11DA6850100AC41E6 /* checkboxOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxOn.png; sourceTree = "<group>"; };
+		6BCD1FA21DA6850100AC41E6 /* checkboxOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkboxOn@2x.png"; sourceTree = "<group>"; };
 		6BD060DE1D9A78920040EED0 /* BSRegisterNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterNavigationController.h; sourceTree = "<group>"; };
 		6BD060DF1D9A78920040EED0 /* BSRegisterNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterNavigationController.m; sourceTree = "<group>"; };
 		6BD060E11D9A7CCE0040EED0 /* BSRegisterFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterFirstViewController.h; sourceTree = "<group>"; };
@@ -621,6 +629,10 @@
 		6BC306731DA4FA2B002A09E6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6BCD1F9F1DA6850100AC41E6 /* checkboxOff.png */,
+				6BCD1FA01DA6850100AC41E6 /* checkboxOff@2x.png */,
+				6BCD1FA11DA6850100AC41E6 /* checkboxOn.png */,
+				6BCD1FA21DA6850100AC41E6 /* checkboxOn@2x.png */,
 				6BC306741DA4FA2B002A09E6 /* AFG@2x.png */,
 				6BC306751DA4FA2B002A09E6 /* ALB@2x.png */,
 				6BC306761DA4FA2B002A09E6 /* AND@2x.png */,
@@ -1136,6 +1148,7 @@
 				6BC307E71DA4FA2B002A09E6 /* TUR@2x.png in Resources */,
 				6BC307821DA4FA2B002A09E6 /* IDN@2x.png in Resources */,
 				6BC307831DA4FA2B002A09E6 /* IND@2x.png in Resources */,
+				6BCD1FA31DA6850100AC41E6 /* checkboxOff.png in Resources */,
 				6BC307EB1DA4FA2B002A09E6 /* UGA@2x.png in Resources */,
 				6BC307A41DA4FA2B002A09E6 /* MDG@2x.png in Resources */,
 				6BC307C01DA4FA2B002A09E6 /* PLW@2x.png in Resources */,
@@ -1168,6 +1181,7 @@
 				6BC3076E1DA4FA2B002A09E6 /* FIN@2x.png in Resources */,
 				6BC307811DA4FA2B002A09E6 /* HUN@2x.png in Resources */,
 				6BC307631DA4FA2B002A09E6 /* DJI@2x.png in Resources */,
+				6BCD1FA41DA6850100AC41E6 /* checkboxOff@2x.png in Resources */,
 				6BC307EA1DA4FA2B002A09E6 /* TZA@2x.png in Resources */,
 				6BC307DB1DA4FA2B002A09E6 /* SWZ@2x.png in Resources */,
 				6BC307421DA4FA2B002A09E6 /* BEL@2x.png in Resources */,
@@ -1194,6 +1208,7 @@
 				6BC307AF1DA4FA2B002A09E6 /* MUS@2x.png in Resources */,
 				6BC307411DA4FA2B002A09E6 /* BDI@2x.png in Resources */,
 				6BC307531DA4FA2B002A09E6 /* CAN@2x.png in Resources */,
+				6BCD1FA61DA6850100AC41E6 /* checkboxOn@2x.png in Resources */,
 				6BC3075C1DA4FA2B002A09E6 /* COM@2x.png in Resources */,
 				6BC3075A1DA4FA2B002A09E6 /* COG@2x.png in Resources */,
 				6BC307E51DA4FA2B002A09E6 /* TTO@2x.png in Resources */,
@@ -1274,6 +1289,7 @@
 				6BC307431DA4FA2B002A09E6 /* BEN@2x.png in Resources */,
 				6BC307701DA4FA2B002A09E6 /* FRA@2x.png in Resources */,
 				6BC307BD1DA4FA2B002A09E6 /* PAN@2x.png in Resources */,
+				6BCD1FA51DA6850100AC41E6 /* checkboxOn.png in Resources */,
 				6BC3076A1DA4FA2B002A09E6 /* ERI@2x.png in Resources */,
 				6BC307891DA4FA2B002A09E6 /* ITA@2x.png in Resources */,
 				6BC3073E1DA4FA2B002A09E6 /* AUS@2x.png in Resources */,

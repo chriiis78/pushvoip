@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BSRegisterSecondViewController : UIViewController
+@interface BSRegisterSecondViewController : UIViewController<UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *pin1;
+@property (weak, nonatomic) IBOutlet UITextField *pin2;
+@property (weak, nonatomic) IBOutlet UITextField *pin3;
+@property (weak, nonatomic) IBOutlet UITextField *pin4;
+@property (weak, nonatomic) IBOutlet UILabel *codeIncorrect;
+@property NSString *code;
 @end

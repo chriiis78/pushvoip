@@ -14,8 +14,4 @@
 @property (weak, nonatomic) IBOutlet UIButton *countryName;
 @property (weak, nonatomic) IBOutlet UITextField *callingCode;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
-@property (weak, nonatomic) IBOutlet UIView *lineTop;
-@property (weak, nonatomic) IBOutlet UIView *lineMiddle;
-@property (weak, nonatomic) IBOutlet UIView *lineBottom;
-@property (weak, nonatomic) IBOutlet UIView *lineVertical;
 @end

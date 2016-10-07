@@ -10,9 +10,6 @@
 #import "BSRegisterFirstViewController.h"
 
 @interface BSRegisterFirstCountryTableViewController () {
-    NSMutableDictionary *animals;
-    NSArray *animalSectionTitles;
-    NSArray *animalIndexTitles;
     NSArray *sections;
     NSArray *sectionTitles;
     NSMutableDictionary *sortedCountryDict;
@@ -25,24 +22,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    animals = @{@"B" : @[@"Bear", @"Black Swan", @"Buffalo"],
-                @"C" : @[@"Camel", @"Cockatoo"],
-                @"D" : @[@"Dog", @"Donkey"],
-                @"E" : @[@"Emu"],
-                @"G" : @[@"Giraffe", @"Greater Rhea"],
-                @"H" : @[@"Hippopotamus", @"Horse"],
-                @"K" : @[@"Koala"],
-                @"L" : @[@"Lion", @"Llama"],
-                @"M" : @[@"Manatus", @"Meerkat"],
-                @"P" : @[@"Panda", @"Peacock", @"Pig", @"Platypus", @"Polar Bear"],
-                @"R" : @[@"Rhinoceros"],
-                @"S" : @[@"Seagull"],
-                @"T" : @[@"Tasmania Devil"],
-                @"W" : @[@"Whale", @"Whale Shark", @"Wombat"]};
-    
-    animalSectionTitles = [[animals allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-    animalIndexTitles = @[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z", @"#"];
     
     NSArray *countriesArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"EmergencyNumbers2" ofType:@"plist"]];
     
@@ -64,10 +43,6 @@
         [sortedCountryDict setObject:[NSArray arrayWithObjects:displayNameString, countryCode[i], countryLongCode[i], callingCode[i], nil] forKey:displayNameString];
         i = i + 1;
     }
-    NSLog(@"sortedCountryDirt %@", sortedCountryDict);
-    
-    
-    
     
     //Count for the section titles, like 'A' 'B' 'C', depends on your language
     NSInteger sectionTitlesCount = [[[UILocalizedIndexedCollation currentCollation] sectionTitles] count];
@@ -102,13 +77,10 @@
         [newArray addObject:subArr];
         [newTitleArray addObject:[collections objectAtIndex:i]];
     }
-    NSLog(@"mutable : %@", newArray);
     sections = newArray;
     sectionTitles = newTitleArray;
     [self.tableView reloadData];
 }
-
-//********************
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     return sectionTitles;
@@ -118,9 +90,6 @@
 {
     return [[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index];
 }
-
-//********************
-
 
 - (NSString *)getImageFilename:(NSString *)sections
 {
@@ -146,8 +115,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSArray *sectionAnimals = [sections objectAtIndex:section];
-    return [sectionAnimals count];
+    NSArray *sectionCountry = [sections objectAtIndex:section];
+    return [sectionCountry count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -155,14 +124,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    NSArray *sectionAnimals = [sections objectAtIndex:indexPath.section];
-    NSString *animal = [sectionAnimals objectAtIndex:indexPath.row];
-    NSArray *country = [sortedCountryDict objectForKey:animal];
+    NSArray *sectionCountry = [sections objectAtIndex:indexPath.section];
+    NSString *row = [sectionCountry objectAtIndex:indexPath.row];
+    NSArray *country = [sortedCountryDict objectForKey:row];
     cell.textLabel.text = country[0];
     cell.detailTextLabel.text = country[3];;
     cell.imageView.image = [UIImage imageNamed:[self getImageFilename:country[2]]];
     cell.accessoryType = UITableViewCellAccessoryNone;
-    // Ca marche pas encore, faut que je trouve comment avoir le countrySelected, NSUserDefaults ?
     if ([country[0] isEqualToString:countrySelected]){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
