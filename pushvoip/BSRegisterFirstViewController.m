@@ -9,6 +9,9 @@
 #import "BSRegisterFirstViewController.h"
 #import "BSRegisterSecondViewController.h"
 #import "BSRegisterFirstCountryTableViewController.h"
+#import <Foundation/Foundation.h>
+
+#define PUSH_HOST @"admin.aedmap.org"
 
 @interface BSRegisterFirstViewController () {
     NSMutableDictionary *sortedCountryDict;
@@ -43,7 +46,6 @@
     
     NSString *country = [defaults objectForKey:@"COUNTRY"];
     NSString *myPhoneNumber = [defaults objectForKey:@"PHONE_NUMBER"];
-    NSLog(@"%@", myPhoneNumber);
     if (myPhoneNumber != nil){
         [phoneNumber setText:myPhoneNumber];
     }
@@ -110,13 +112,39 @@
     }
 }
 - (IBAction)confirmRegisterFirst:(UIButton *)sender {
-    NSLog(@"First");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:@"BLA" forKey:@"WAIT_CODE_TOKEN"];
-    [defaults setObject:countryName.titleLabel.text forKey:@"COUNTRY"];
-    NSLog(@"%@", countryName.titleLabel.text);
-    NSLog(@"%@", phoneNumber.text);
-    [defaults setObject:phoneNumber.text forKey:@"PHONE_NUMBER"];
-    [defaults synchronize];
+    
+    NSString *pushCredentialsToken = [defaults objectForKey:@"CREDENTIALS_TOKEN"];
+    pushCredentialsToken = [[pushCredentialsToken.description componentsSeparatedByCharactersInSet:[[NSCharacterSet alphanumericCharacterSet]invertedSet]]componentsJoinedByString:@""];
+    
+    NSString *urlString = [NSString stringWithFormat:@"/apiFirstResponder/accountInit/%d/%d/%@/", 0612131415, 33, pushCredentialsToken];
+    urlString = [urlString stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    
+    NSURL *url = [[NSURL alloc] initWithScheme:@"https" host:PUSH_HOST path:urlString];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        NSString *dataResponse = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
+        NSArray *jsonObject = [NSJSONSerialization JSONObjectWithData:[dataResponse dataUsingEncoding:NSUTF8StringEncoding]
+                                                              options:0 error:NULL];
+        
+        NSString *result = [jsonObject valueForKey:@"result"];
+        if ([result isEqualToString:@"OK"]){
+            NSString *token = [jsonObject valueForKey:@"token"];
+            [defaults setObject:token forKey:@"WAIT_CODE_TOKEN"];
+            [defaults setObject:countryName.titleLabel.text forKey:@"COUNTRY"];
+            [defaults setObject:phoneNumber.text forKey:@"PHONE_NUMBER"];
+            [defaults synchronize];
+            
+            UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UIViewController *myController = [sb instantiateViewControllerWithIdentifier:@"BSRegisterSecondViewController"];
+            [self.navigationController pushViewController: myController animated:YES];
+        }
+        
+#ifdef DEBUG
+        NSLog(@"error : %@", [error description]);
+        NSLog(@"Register URL: %@%@", PUSH_HOST, urlString);
+#endif
+    }];
 }
 @end

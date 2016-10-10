@@ -11,5 +11,6 @@
 @interface BSRegisterThirdViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
+@property (weak, nonatomic) IBOutlet UIWebView *webCGU;
 
 @end

@@ -380,7 +380,21 @@ votre numéro de téléphone.</string>
                                 </variation>
                                 <connections>
                                     <action selector="confirmRegisterFirst:" destination="ucE-GV-g0j" eventType="touchUpInside" id="wnC-6P-rce"/>
-                                    <segue destination="Uem-bp-2Vy" kind="show" identifier="" id="0vg-vW-HIK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crp-Cn-qwZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Continuer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="379" width="68" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Uem-bp-2Vy" kind="show" id="flP-kz-I6b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -457,6 +471,7 @@ votre numéro de téléphone.</string>
                                 <exclude reference="5iQ-LR-gta"/>
                                 <exclude reference="arc-Jy-47q"/>
                                 <exclude reference="dvw-MO-G7P"/>
+                                <exclude reference="crp-Cn-qwZ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="CvW-mV-meo"/>
@@ -505,6 +520,7 @@ votre numéro de téléphone.</string>
                                 <include reference="5iQ-LR-gta"/>
                                 <include reference="arc-Jy-47q"/>
                                 <include reference="dvw-MO-G7P"/>
+                                <include reference="crp-Cn-qwZ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="CvW-mV-meo"/>
@@ -843,18 +859,18 @@ que vous avez reçu par SMS.</string>
                                         <exclude reference="NPS-vF-BcC"/>
                                         <exclude reference="blc-kJ-7E7"/>
                                         <exclude reference="0Dv-z1-Ffv"/>
-                                        <exclude reference="0aE-xz-T1g"/>
-                                        <exclude reference="GDD-OQ-yBt"/>
-                                        <exclude reference="Y4Q-Rv-2lI"/>
-                                        <exclude reference="g6R-HL-JRv"/>
+                                        <exclude reference="Tyy-5l-p1v"/>
+                                        <exclude reference="wVU-Zz-CoU"/>
                                         <exclude reference="GLq-q3-KKP"/>
                                         <exclude reference="VJc-EL-UVA"/>
                                         <exclude reference="WBw-07-UZJ"/>
                                         <exclude reference="dnl-CB-ojG"/>
                                         <exclude reference="eVW-fz-7yC"/>
                                         <exclude reference="n9n-oB-8Eu"/>
-                                        <exclude reference="Tyy-5l-p1v"/>
-                                        <exclude reference="wVU-Zz-CoU"/>
+                                        <exclude reference="0aE-xz-T1g"/>
+                                        <exclude reference="GDD-OQ-yBt"/>
+                                        <exclude reference="Y4Q-Rv-2lI"/>
+                                        <exclude reference="g6R-HL-JRv"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -870,18 +886,18 @@ que vous avez reçu par SMS.</string>
                                         <include reference="NPS-vF-BcC"/>
                                         <include reference="blc-kJ-7E7"/>
                                         <include reference="0Dv-z1-Ffv"/>
-                                        <include reference="0aE-xz-T1g"/>
-                                        <include reference="GDD-OQ-yBt"/>
-                                        <include reference="Y4Q-Rv-2lI"/>
-                                        <include reference="g6R-HL-JRv"/>
+                                        <include reference="Tyy-5l-p1v"/>
+                                        <include reference="wVU-Zz-CoU"/>
                                         <include reference="GLq-q3-KKP"/>
                                         <include reference="VJc-EL-UVA"/>
                                         <include reference="WBw-07-UZJ"/>
                                         <include reference="dnl-CB-ojG"/>
                                         <include reference="eVW-fz-7yC"/>
                                         <include reference="n9n-oB-8Eu"/>
-                                        <include reference="Tyy-5l-p1v"/>
-                                        <include reference="wVU-Zz-CoU"/>
+                                        <include reference="0aE-xz-T1g"/>
+                                        <include reference="GDD-OQ-yBt"/>
+                                        <include reference="Y4Q-Rv-2lI"/>
+                                        <include reference="g6R-HL-JRv"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -926,6 +942,13 @@ que vous avez reçu par SMS.</string>
                                 <exclude reference="e5M-ib-nKh"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="4S0-F2-EnM"/>
+                                <exclude reference="qan-dQ-as1"/>
+                                <exclude reference="L62-EP-sQu"/>
+                                <exclude reference="mPY-54-Q8h"/>
+                                <exclude reference="NZ7-8D-che"/>
+                                <exclude reference="QJR-Ty-0Xh"/>
+                                <exclude reference="cCO-5C-CAW"/>
                                 <exclude reference="32y-QE-vbb"/>
                                 <exclude reference="8YF-zn-2v3"/>
                                 <exclude reference="bAY-Xd-Ysg"/>
@@ -935,13 +958,6 @@ que vous avez reçu par SMS.</string>
                                 <exclude reference="Wb9-XU-F1g"/>
                                 <exclude reference="bou-Zr-rlS"/>
                                 <exclude reference="tmd-gA-7H7"/>
-                                <exclude reference="NZ7-8D-che"/>
-                                <exclude reference="QJR-Ty-0Xh"/>
-                                <exclude reference="cCO-5C-CAW"/>
-                                <exclude reference="4S0-F2-EnM"/>
-                                <exclude reference="qan-dQ-as1"/>
-                                <exclude reference="L62-EP-sQu"/>
-                                <exclude reference="mPY-54-Q8h"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -953,6 +969,13 @@ que vous avez reçu par SMS.</string>
                                 <include reference="e5M-ib-nKh"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="4S0-F2-EnM"/>
+                                <include reference="qan-dQ-as1"/>
+                                <include reference="L62-EP-sQu"/>
+                                <include reference="mPY-54-Q8h"/>
+                                <include reference="NZ7-8D-che"/>
+                                <exclude reference="QJR-Ty-0Xh"/>
+                                <include reference="cCO-5C-CAW"/>
                                 <include reference="32y-QE-vbb"/>
                                 <include reference="8YF-zn-2v3"/>
                                 <include reference="bAY-Xd-Ysg"/>
@@ -962,13 +985,6 @@ que vous avez reçu par SMS.</string>
                                 <include reference="Wb9-XU-F1g"/>
                                 <include reference="bou-Zr-rlS"/>
                                 <include reference="tmd-gA-7H7"/>
-                                <include reference="NZ7-8D-che"/>
-                                <exclude reference="QJR-Ty-0Xh"/>
-                                <include reference="cCO-5C-CAW"/>
-                                <include reference="4S0-F2-EnM"/>
-                                <include reference="qan-dQ-as1"/>
-                                <include reference="L62-EP-sQu"/>
-                                <include reference="mPY-54-Q8h"/>
                             </mask>
                         </variation>
                     </view>
@@ -998,7 +1014,7 @@ que vous avez reçu par SMS.</string>
                         <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xzU-a7-yIj">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzU-a7-yIj">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -1194,6 +1210,7 @@ générales d'utilisation</string>
                     <connections>
                         <outlet property="checkButton" destination="MsH-bl-Ssi" id="udg-aD-cD3"/>
                         <outlet property="continueButton" destination="N2K-aF-STk" id="i00-E8-S4q"/>
+                        <outlet property="webCGU" destination="xzU-a7-yIj" id="qqn-aC-MVX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gH-sb-OkL" userLabel="First Responder" sceneMemberID="firstResponder"/>

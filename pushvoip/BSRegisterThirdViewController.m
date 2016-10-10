@@ -11,6 +11,7 @@
 @implementation BSRegisterThirdViewController
 @synthesize checkButton;
 @synthesize continueButton;
+@synthesize webCGU;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -19,6 +20,12 @@
     
     UIBarButtonItem *btnLogout = [[UIBarButtonItem alloc]initWithTitle:@"Annuler" style:UIBarButtonItemStyleDone target:self action:@selector(btnOnClick:)];
     self.navigationItem.leftBarButtonItem = btnLogout;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *urlBS = [defaults valueForKey:@"BS_CGU"];
+    NSURL *url = [NSURL URLWithString:urlBS];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [webCGU loadRequest:urlRequest];
 }
 
 -(void)btnOnClick:(id)sender

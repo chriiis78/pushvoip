@@ -191,6 +191,9 @@
     }
     
     NSLog(@"PushCredentials: %@", credentials.token);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:credentials.token forKey:@"CREDENTIALS_TOKEN"];
+    [defaults synchronize];
 }
 
 // Handle incoming pushes
