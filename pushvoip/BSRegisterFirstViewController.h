@@ -10,7 +10,8 @@
 #import "BSRegisterFirstViewController.h"
 
 @interface BSRegisterFirstViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *countryFlag;
+
+@property (weak, nonatomic) IBOutlet UIButton *countryFlag;
 @property (weak, nonatomic) IBOutlet UIButton *countryName;
 @property (weak, nonatomic) IBOutlet UITextField *callingCode;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumber;

@@ -83,7 +83,7 @@
     }
     
     NSArray *countrySelected = [sortedCountryDict objectForKey:country];
-    [countryFlag setImage: [UIImage imageNamed:[self getImageFilename:countrySelected[2]]]];
+    [countryFlag setImage: [UIImage imageNamed:[self getImageFilename:countrySelected[2]]] forState:UIControlStateNormal];
     callingCode.text = countrySelected[3];
 }
 
@@ -104,7 +104,7 @@
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"countryTable"]) {
+    if ([[segue identifier] isEqualToString:@"countryTable"] || [[segue identifier] isEqualToString:@"countryTableFlag"]) {
         // Get destination view
         BSRegisterFirstCountryTableViewController *vc = (BSRegisterFirstCountryTableViewController *)segue.destinationViewController;
         // Get button tag number (or do whatever you need to do here, based on your object

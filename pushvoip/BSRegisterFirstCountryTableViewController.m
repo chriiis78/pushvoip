@@ -153,7 +153,7 @@
     NSIndexPath *selectedPath = [self.tableView indexPathForCell:sender];
     
     [vca.countryName setTitle: [self.tableView cellForRowAtIndexPath:selectedPath].textLabel.text forState:UIControlStateNormal];
-    [vca.countryFlag setImage: [self.tableView cellForRowAtIndexPath:selectedPath].imageView.image];
+    [vca.countryFlag setImage: [self.tableView cellForRowAtIndexPath:selectedPath].imageView.image forState:UIControlStateNormal];
     vca.callingCode.text = [self.tableView cellForRowAtIndexPath:selectedPath].detailTextLabel.text;
 
 }
