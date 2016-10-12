@@ -123,6 +123,8 @@
                 [defaults setObject:[jsonObject valueForKey:@"cgu"] forKey:@"BS_CGU"];
                 [defaults setObject:[jsonObject valueForKey:@"displayGender"] forKey:@"BS_DISPLAY_GENDER"];
                 [defaults setObject:[jsonObject valueForKey:@"displayZipCode"] forKey:@"BS_DISPLAY_ZIPCODE"];
+                //[defaults setObject:0 forKey:@"BS_DISPLAY_GENDER"];
+                //[defaults setObject:0 forKey:@"BS_DISPLAY_ZIPCODE"];
                 [defaults setObject:[jsonObject valueForKey:@"skill"] forKey:@"BS_SKILL"];
                 [defaults synchronize];
                 UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

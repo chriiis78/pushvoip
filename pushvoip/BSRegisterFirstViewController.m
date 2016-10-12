@@ -11,6 +11,8 @@
 #import "BSRegisterFirstCountryTableViewController.h"
 #import <Foundation/Foundation.h>
 
+#import "NBPhoneMetaDataGenerator.h"
+
 #define PUSH_HOST @"admin.aedmap.org"
 
 @interface BSRegisterFirstViewController () {

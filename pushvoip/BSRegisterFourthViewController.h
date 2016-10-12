@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BSRegisterFourthViewController : UIViewController
+@interface BSRegisterFourthViewController : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *firstname;
 @property (weak, nonatomic) IBOutlet UITextField *lastname;
@@ -26,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UIView *lineVertical;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineEmailConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineBottomConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *continueButton;
 
 @end

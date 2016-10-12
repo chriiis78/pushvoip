@@ -18,6 +18,7 @@
 		6B516FAF1D8AA36200D1A45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B516FAE1D8AA36200D1A45A /* Assets.xcassets */; };
 		6B516FB31D8AA36200D1A45A /* pushvoip watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6B516F8C1D8AA36200D1A45A /* pushvoip watch.app */; };
 		6B516FBD1D8AA88600D1A45A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B516FBC1D8AA88600D1A45A /* MapKit.framework */; };
+		6B78EE081DAE81FB00179EA2 /* libPhoneNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B78EE071DAE81FB00179EA2 /* libPhoneNumber.framework */; };
 		6BC307371DA4FA2B002A09E6 /* AFG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC306741DA4FA2B002A09E6 /* AFG@2x.png */; };
 		6BC307381DA4FA2B002A09E6 /* ALB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC306751DA4FA2B002A09E6 /* ALB@2x.png */; };
 		6BC307391DA4FA2B002A09E6 /* AND@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC306761DA4FA2B002A09E6 /* AND@2x.png */; };
@@ -227,7 +228,6 @@
 		6BE2E39E1D9BF6F20013F20C /* BSRegisterFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2E39D1D9BF6F20013F20C /* BSRegisterFifthViewController.m */; };
 		6BE2E3A11D9C0D3D0013F20C /* BSRegisterFirstCountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2E3A01D9C0D3D0013F20C /* BSRegisterFirstCountryTableViewController.m */; };
 		6BF0C07E1DA26834002F74BA /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BF0C07D1DA26834002F74BA /* countries.json */; };
-		6BF0C0801DA28A3C002F74BA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF0C07F1DA28A3C002F74BA /* CoreTelephony.framework */; };
 		FC4E831D1D76C1A800D9D5BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831C1D76C1A800D9D5BC /* main.m */; };
 		FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */; };
 		FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E83221D76C1A800D9D5BC /* ViewController.m */; };
@@ -316,6 +316,7 @@
 		6B516FAE1D8AA36200D1A45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B516FB01D8AA36200D1A45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B516FBC1D8AA88600D1A45A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6B78EE071DAE81FB00179EA2 /* libPhoneNumber.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libPhoneNumber.framework; path = "libPhoneNumber-iOS-36fd753e32ae40394287147d666804cfd009b6ed/build/Debug-iphoneos/libPhoneNumber.framework"; sourceTree = "<group>"; };
 		6BC306741DA4FA2B002A09E6 /* AFG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AFG@2x.png"; sourceTree = "<group>"; };
 		6BC306751DA4FA2B002A09E6 /* ALB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ALB@2x.png"; sourceTree = "<group>"; };
 		6BC306761DA4FA2B002A09E6 /* AND@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AND@2x.png"; sourceTree = "<group>"; };
@@ -531,7 +532,6 @@
 		6BE2E39F1D9C0D3D0013F20C /* BSRegisterFirstCountryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterFirstCountryTableViewController.h; sourceTree = "<group>"; };
 		6BE2E3A01D9C0D3D0013F20C /* BSRegisterFirstCountryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterFirstCountryTableViewController.m; sourceTree = "<group>"; };
 		6BF0C07D1DA26834002F74BA /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
-		6BF0C07F1DA28A3C002F74BA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		FC4E83181D76C1A700D9D5BC /* pushvoip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushvoip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4E831C1D76C1A800D9D5BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC4E831E1D76C1A800D9D5BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -564,7 +564,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BF0C0801DA28A3C002F74BA /* CoreTelephony.framework in Frameworks */,
+				6B78EE081DAE81FB00179EA2 /* libPhoneNumber.framework in Frameworks */,
 				6B516FBD1D8AA88600D1A45A /* MapKit.framework in Frameworks */,
 				FCF4823A1D77043400946B2E /* CoreLocation.framework in Frameworks */,
 				FC4E83501D76C31700D9D5BC /* PushKit.framework in Frameworks */,
@@ -835,7 +835,7 @@
 		FC4E830F1D76C1A700D9D5BC = {
 			isa = PBXGroup;
 			children = (
-				6BF0C07F1DA28A3C002F74BA /* CoreTelephony.framework */,
+				6B78EE071DAE81FB00179EA2 /* libPhoneNumber.framework */,
 				6B516FBC1D8AA88600D1A45A /* MapKit.framework */,
 				FCF482391D77043400946B2E /* CoreLocation.framework */,
 				FC4E834F1D76C31700D9D5BC /* PushKit.framework */,
@@ -1568,6 +1568,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libPhoneNumber-iOS-master/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/libPhoneNumber-iOS-36fd753e32ae40394287147d666804cfd009b6ed/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = pushvoip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1583,6 +1588,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libPhoneNumber-iOS-master/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/libPhoneNumber-iOS-36fd753e32ae40394287147d666804cfd009b6ed/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = pushvoip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
