@@ -68,6 +68,8 @@
                                    style:UIAlertActionStyleDefault
                                    handler:^(UIAlertAction * action) {
                                        //Handle no, thanks button
+                                       [lastname becomeFirstResponder];
+
                                    }];
         
         UIAlertAction* yesButton = [UIAlertAction
@@ -78,7 +80,13 @@
                                         firstname.text = firstnameBS;
                                         lastname.text = lastnameBS;
                                         email.text = emailBS;
-                                        [self action:nil];
+                                        [self selectGender:nil];
+                                        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                                        BOOL displayZipCode = [defaults valueForKey:@"BS_DISPLAY_ZIPCODE"];
+                                        
+                                        if (displayZipCode == YES)
+                                            [zipCode becomeFirstResponder];
+
                                     }];
         
         [alert addAction:noButton];
@@ -90,12 +98,11 @@
     lastname.delegate = self;
     zipCode.delegate = self;
     email.delegate = self;
-    [firstname becomeFirstResponder];
     continueButton.enabled = NO;
     continueButton.backgroundColor = [UIColor lightGrayColor];
     
     [gender addTarget:self
-            action:@selector(action:)
+            action:@selector(selectGender:)
             forControlEvents:UIControlEventValueChanged];
 }
 
@@ -148,9 +155,9 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL displayZipCode = [defaults valueForKey:@"BS_DISPLAY_ZIPCODE"];
     
-    if (textField == firstname){
-        [lastname becomeFirstResponder];
-    } else if (textField == lastname){
+    if (textField == lastname){
+        [firstname becomeFirstResponder];
+    } else if (textField == firstname){
         if (displayZipCode == YES)
             [zipCode becomeFirstResponder];
         else
@@ -169,7 +176,7 @@
     [super touchesBegan:touches withEvent:event];
 }
 
-- (void)action:(id)sender
+- (void)selectGender:(id)sender
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL displayGender = [defaults valueForKey:@"BS_DISPLAY_GENDER"];
@@ -194,6 +201,15 @@
         continueButton.enabled = YES;
         continueButton.backgroundColor = [UIColor colorWithRed:0.000323687 green:0.69973 blue:0.231126 alpha:1];
     }
+    [self resignAllResponder];
+}
+
+- (void)resignAllResponder
+{
+    [lastname resignFirstResponder];
+    [firstname resignFirstResponder];
+    [zipCode resignFirstResponder];
+    [email resignFirstResponder];
 }
 
 - (IBAction)confirmFourthRegister:(UIButton *)sender

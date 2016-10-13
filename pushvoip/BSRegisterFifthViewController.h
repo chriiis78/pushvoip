@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BSRegisterFifthViewController : UIViewController
+@interface BSRegisterFifthViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource,UIImagePickerControllerDelegate>
+
+@property (nonatomic, strong) UIPickerView *skillPicker;
+
+@property (weak, nonatomic) IBOutlet UIButton *skillButton;
+@property (weak, nonatomic) IBOutlet UITextField *skillText;
+
+@property NSArray *skillList;
+@property NSString *skillId;
+@property int currentTextField;
+
++ (UIToolbar *)closeToolbarWithTarget:(id)target andSelector:(SEL)selector;
 
 @end

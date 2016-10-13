@@ -18,6 +18,9 @@
 		6B516FAF1D8AA36200D1A45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B516FAE1D8AA36200D1A45A /* Assets.xcassets */; };
 		6B516FB31D8AA36200D1A45A /* pushvoip watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6B516F8C1D8AA36200D1A45A /* pushvoip watch.app */; };
 		6B516FBD1D8AA88600D1A45A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B516FBC1D8AA88600D1A45A /* MapKit.framework */; };
+		6B68FBF11DAFCC510013F66A /* UITextField+toolbarAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68FBF01DAFCC510013F66A /* UITextField+toolbarAddition.m */; };
+		6B68FBF31DAFCDDD0013F66A /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B68FBF21DAFCDDD0013F66A /* cross.png */; };
+		6B68FBF51DAFCE070013F66A /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B68FBF41DAFCE070013F66A /* cross@2x.png */; };
 		6BC307371DA4FA2B002A09E6 /* AFG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC306741DA4FA2B002A09E6 /* AFG@2x.png */; };
 		6BC307381DA4FA2B002A09E6 /* ALB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC306751DA4FA2B002A09E6 /* ALB@2x.png */; };
 		6BC307391DA4FA2B002A09E6 /* AND@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC306761DA4FA2B002A09E6 /* AND@2x.png */; };
@@ -315,6 +318,10 @@
 		6B516FAE1D8AA36200D1A45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B516FB01D8AA36200D1A45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B516FBC1D8AA88600D1A45A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6B68FBEF1DAFCC510013F66A /* UITextField+toolbarAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+toolbarAddition.h"; sourceTree = "<group>"; };
+		6B68FBF01DAFCC510013F66A /* UITextField+toolbarAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+toolbarAddition.m"; sourceTree = "<group>"; };
+		6B68FBF21DAFCDDD0013F66A /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		6B68FBF41DAFCE070013F66A /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
 		6BC306741DA4FA2B002A09E6 /* AFG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AFG@2x.png"; sourceTree = "<group>"; };
 		6BC306751DA4FA2B002A09E6 /* ALB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ALB@2x.png"; sourceTree = "<group>"; };
 		6BC306761DA4FA2B002A09E6 /* AND@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AND@2x.png"; sourceTree = "<group>"; };
@@ -626,6 +633,8 @@
 		6BC306731DA4FA2B002A09E6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6B68FBF21DAFCDDD0013F66A /* cross.png */,
+				6B68FBF41DAFCE070013F66A /* cross@2x.png */,
 				6BCD1F9F1DA6850100AC41E6 /* checkboxOff.png */,
 				6BCD1FA01DA6850100AC41E6 /* checkboxOff@2x.png */,
 				6BCD1FA11DA6850100AC41E6 /* checkboxOn.png */,
@@ -861,6 +870,8 @@
 			children = (
 				6BC306731DA4FA2B002A09E6 /* images */,
 				6BF0C07D1DA26834002F74BA /* countries.json */,
+				6B68FBEF1DAFCC510013F66A /* UITextField+toolbarAddition.h */,
+				6B68FBF01DAFCC510013F66A /* UITextField+toolbarAddition.m */,
 				FC4E831E1D76C1A800D9D5BC /* AppDelegate.h */,
 				FC4E831F1D76C1A800D9D5BC /* AppDelegate.m */,
 				FC4E83211D76C1A800D9D5BC /* ViewController.h */,
@@ -1255,9 +1266,11 @@
 				FC4E83281D76C1A800D9D5BC /* Assets.xcassets in Resources */,
 				6BC307581DA4FA2B002A09E6 /* CMR@2x.png in Resources */,
 				6BC307C51DA4FA2B002A09E6 /* PRY@2x.png in Resources */,
+				6B68FBF31DAFCDDD0013F66A /* cross.png in Resources */,
 				6BC307E61DA4FA2B002A09E6 /* TUN@2x.png in Resources */,
 				6BC307DF1DA4FA2B002A09E6 /* TGO@2x.png in Resources */,
 				6BC307A21DA4FA2B002A09E6 /* MCO@2x.png in Resources */,
+				6B68FBF51DAFCE070013F66A /* cross@2x.png in Resources */,
 				6BC3078D1DA4FA2B002A09E6 /* KAZ@2x.png in Resources */,
 				6BC307911DA4FA2B002A09E6 /* KIR@2x.png in Resources */,
 				6BC3074D1DA4FA2B002A09E6 /* BRA@2x.png in Resources */,
@@ -1339,6 +1352,7 @@
 				6BD060E01D9A78920040EED0 /* BSRegisterNavigationController.m in Sources */,
 				6BE2E3A11D9C0D3D0013F20C /* BSRegisterFirstCountryTableViewController.m in Sources */,
 				6BD060E61D9A9C8D0040EED0 /* BSRegisterSecondViewController.m in Sources */,
+				6B68FBF11DAFCC510013F66A /* UITextField+toolbarAddition.m in Sources */,
 				FC4E831D1D76C1A800D9D5BC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
