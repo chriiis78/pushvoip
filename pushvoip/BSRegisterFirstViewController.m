@@ -64,9 +64,9 @@
     
     NSArray *countriesArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"EmergencyNumbers2" ofType:@"plist"]];
     
-    NSMutableArray *countryCodeArray = [[NSMutableArray alloc] init];;
-    NSMutableArray *countryLongCodeArray = [[NSMutableArray alloc] init];;
-    NSMutableArray *callingCodeArray = [[NSMutableArray alloc] init];;
+    NSMutableArray *countryCodeArray = [[NSMutableArray alloc] init];
+    NSMutableArray *countryLongCodeArray = [[NSMutableArray alloc] init];
+    NSMutableArray *callingCodeArray = [[NSMutableArray alloc] init];
     
     for (NSDictionary *array in countriesArray){
         [countryCodeArray addObject:[array objectForKey:@"short_code"]];

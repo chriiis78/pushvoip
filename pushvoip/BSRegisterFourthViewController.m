@@ -81,8 +81,6 @@
                                         lastname.text = lastnameBS;
                                         email.text = emailBS;
                                         [self selectGender:nil];
-                                        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-                                        BOOL displayZipCode = [defaults valueForKey:@"BS_DISPLAY_ZIPCODE"];
                                         
                                         if (displayZipCode == YES)
                                             [zipCode becomeFirstResponder];
