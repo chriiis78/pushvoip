@@ -97,7 +97,7 @@
     zipCode.delegate = self;
     email.delegate = self;
     continueButton.enabled = NO;
-    continueButton.backgroundColor = [UIColor lightGrayColor];
+    continueButton.backgroundColor = [UIColor colorWithRed:0.862861 green:0.862861 blue:0.862861 alpha:1];
     
     [gender addTarget:self
             action:@selector(selectGender:)
@@ -132,7 +132,7 @@
         if (condition == NO)
         {
             continueButton.enabled = NO;
-            continueButton.backgroundColor = [UIColor lightGrayColor];
+            continueButton.backgroundColor = [UIColor colorWithRed:0.862861 green:0.862861 blue:0.862861 alpha:1];
         } else{
             continueButton.enabled = YES;
             continueButton.backgroundColor = [UIColor colorWithRed:0.000323687 green:0.69973 blue:0.231126 alpha:1];
@@ -142,7 +142,7 @@
     //this goes to previous field as you backspace through them, so you don't have to tap into them individually
     else {
         continueButton.enabled = NO;
-        continueButton.backgroundColor = [UIColor lightGrayColor];
+        continueButton.backgroundColor = [UIColor colorWithRed:0.862861 green:0.862861 blue:0.862861 alpha:1];
 
     }
     return YES;
@@ -194,7 +194,7 @@
     
     if (condition == NO){
         continueButton.enabled = NO;
-        continueButton.backgroundColor = [UIColor lightGrayColor];
+        continueButton.backgroundColor = [UIColor colorWithRed:0.862861 green:0.862861 blue:0.862861 alpha:1];
     } else{
         continueButton.enabled = YES;
         continueButton.backgroundColor = [UIColor colorWithRed:0.000323687 green:0.69973 blue:0.231126 alpha:1];

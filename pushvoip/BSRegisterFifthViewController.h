@@ -23,7 +23,14 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineDateContraint;
 
 @property (weak, nonatomic) IBOutlet UIButton *btJustif;
+@property (weak, nonatomic) IBOutlet UILabel *justifLabel;
 @property (nonatomic, strong) NSData *imageJustif;
+@property BOOL checkJustif;
+@property BOOL expirationStatus;
+@property NSDate *expirationDate;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *confirmFifth;
 
 @property NSArray *skillList;
 @property NSString *skillId;

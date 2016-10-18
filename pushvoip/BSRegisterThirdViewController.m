@@ -34,6 +34,7 @@
 }
 
 - (IBAction)checkValidButton:(UIButton *)sender {
+    NSLog(@"%@", continueButton.backgroundColor);
     if (continueButton.enabled == NO){
         [checkButton setImage:[UIImage imageNamed:@"checkboxOn.png"] forState:UIControlStateNormal];
         continueButton.enabled = YES;
@@ -41,7 +42,7 @@
     } else{
         [checkButton setImage:[UIImage imageNamed:@"checkboxOff.png"] forState:UIControlStateNormal];
         continueButton.enabled = NO;
-        continueButton.backgroundColor = [UIColor lightGrayColor];
+        continueButton.backgroundColor = [UIColor colorWithRed:0.862861 green:0.862861 blue:0.862861 alpha:1];
     }
 
 }

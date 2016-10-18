@@ -1052,7 +1052,7 @@ que vous avez reçu par SMS.</string>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2K-aF-STk">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.86286057692307683" green="0.86286057692307683" blue="0.86286057692307683" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IUa-2x-aVa"/>
                                 </constraints>
@@ -2135,6 +2135,9 @@ générales d'utilisation</string>
                                         <include reference="1p0-0t-gZX"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="justifInfo:" destination="XKr-Bf-rp1" eventType="touchUpInside" id="SIV-jf-gQ5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2304,9 +2307,11 @@ générales d'utilisation</string>
                     </view>
                     <connections>
                         <outlet property="btJustif" destination="Y3z-In-EkE" id="rlr-Oh-Dxu"/>
+                        <outlet property="confirmFifth" destination="EZb-gn-cQB" id="Kjg-WZ-9hb"/>
                         <outlet property="dateLabel" destination="E1N-Kc-lF4" id="bAk-VK-PCq"/>
                         <outlet property="datePicker" destination="ybW-U0-gS5" id="Xv0-mt-d7o"/>
                         <outlet property="dateText" destination="ybW-U0-gS5" id="8bR-YI-b6H"/>
+                        <outlet property="justifLabel" destination="GJR-Rm-dpy" id="RzL-0p-LRG"/>
                         <outlet property="lineDateContraint" destination="yPd-n4-zfd" id="yr0-Md-h9I"/>
                         <outlet property="lineDateText" destination="f7q-PU-dlc" id="udm-bQ-jux"/>
                         <outlet property="lineDateTextBottom" destination="iqW-EH-BeK" id="wgo-78-jh7"/>

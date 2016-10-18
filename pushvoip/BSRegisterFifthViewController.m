@@ -24,6 +24,11 @@
 @synthesize lineDateContraint;
 @synthesize imageJustif;
 @synthesize btJustif;
+@synthesize justifLabel;
+@synthesize checkJustif;
+@synthesize expirationStatus;
+@synthesize expirationDate;
+@synthesize confirmFifth;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,7 +43,6 @@
     lineDateTextBottom.hidden = YES;
     dateLabel.hidden = YES;
     dateText.hidden = YES;
-    lineDateContraint.constant = 45;
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
     
@@ -47,14 +51,18 @@
     skillPicker.delegate = self;
     skillText.inputView = skillPicker;
     skillText.inputAccessoryView = [UITextField closeToolbarWithTarget:self andSelector:@selector(resignAllResponder)];
+    
     datePicker = [[UIDatePicker alloc] init];
     datePicker.datePickerMode = UIDatePickerModeDate;
     dateText.inputView = datePicker;
     dateText.inputAccessoryView = [UITextField closeToolbarWithTarget:self andSelector:@selector(resignAllResponder)];
     [datePicker addTarget:self action:@selector(pickerChanged:)               forControlEvents:UIControlEventValueChanged];
+    
     self.imageJustif = nil;
     [btJustif.imageView setContentMode:UIViewContentModeScaleAspectFit];
-    NSLog(@"viewDidLoad");
+    checkJustif = NO;
+    confirmFifth.enabled = NO;
+    confirmFifth.backgroundColor = [UIColor colorWithRed:0.862861 green:0.862861 blue:0.862861 alpha:1];
 }
 
 - (void)initSkillList
@@ -97,24 +105,24 @@
 {
     NSLog(@"value: %@",[sender date]);
     dateText.text = [NSDateFormatter localizedStringFromDate:[sender date]
-                                                   dateStyle:NSDateFormatterShortStyle
+                                                   dateStyle:NSDateFormatterLongStyle
                                                    timeStyle:NSDateFormatterNoStyle];
-}
-- (void)viewDidAppear:(BOOL)animated
-{
-    lineDateContraint.constant = -45;
+    expirationDate = [sender date];
+    [self checkForm];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    for (int i=0; i<[skillList count]; i++) {
-        if ([[[skillList objectAtIndex:i] objectForKey:@"ID"] isEqualToString:@"0"]) {
-            [skillText setText:[[skillList objectAtIndex:i] objectForKey:@"NAME"]];
-            skillId = [[skillList objectAtIndex:i] objectForKey:@"ID"];
-            [skillPicker selectRow:i inComponent:0 animated:NO];
+    if (skillId == nil){
+        for (int i=0; i<[skillList count]; i++) {
+            if ([[[skillList objectAtIndex:i] objectForKey:@"ID"] isEqualToString:@"0"]) {
+                [skillText setText:[[skillList objectAtIndex:i] objectForKey:@"NAME"]];
+                skillId = [[skillList objectAtIndex:i] objectForKey:@"ID"];
+                [skillPicker selectRow:i inComponent:0 animated:NO];
+            }
         }
+        lineDateContraint.constant = -45;
     }
-    lineDateContraint.constant = -45;
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -212,6 +220,7 @@
     expiration = [NSString stringWithFormat:@"%@", expiration];
     [self.view layoutIfNeeded];
     if ([expiration isEqual:@"1"]){
+        expirationStatus = YES;
         [UIView animateWithDuration:0.2 animations:^{
             lineDateText.hidden = NO;
             lineDateTextBottom.hidden = NO;
@@ -224,6 +233,7 @@
             [self.view layoutIfNeeded];
         }];
     }else if ([expiration isEqual:@"0"]){
+        expirationStatus = NO;
         [UIView animateWithDuration:0.2 animations:^{
             lineDateText.hidden = YES;
             lineDateTextBottom.hidden = YES;
@@ -236,7 +246,33 @@
             [self.view layoutIfNeeded];
         }];
     }
+    [self checkForm];
+}
+
+- (void)checkForm
+{
+    BOOL valid = YES;
+    if (skillText.text == nil || [skillText.text isEqual:@""]){
+        valid = NO;
+    }
+    if (expirationStatus == YES){
+        NSDate *currentDate = [NSDate date];
+        NSLog(@"current : %@   exp : %@", currentDate, expirationDate);
+        if ([expirationDate compare:currentDate] == NSOrderedAscending || expirationDate == nil){
+            valid = NO;
+        }
+    }
+    if (checkJustif == NO){
+        valid = NO;
+    }
     
+    if (valid == NO){
+        confirmFifth.enabled = NO;
+        confirmFifth.backgroundColor = [UIColor colorWithRed:0.862861 green:0.862861 blue:0.862861 alpha:1];
+    } else{
+        confirmFifth.enabled = YES;
+        confirmFifth.backgroundColor = [UIColor colorWithRed:0.000323687 green:0.69973 blue:0.231126 alpha:1];
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -290,8 +326,6 @@
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         if(buttonIndex == actionSheet.firstOtherButtonIndex) {
             picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-            
-            NSLog(@"competence %@ %@", skillId, skillText.text);
         }
         else if(buttonIndex == actionSheet.firstOtherButtonIndex+1) {
             picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -321,6 +355,9 @@
     
     [btJustif setContentMode:UIViewContentModeScaleAspectFit];
     [btJustif setImage:image forState:UIControlStateNormal];
+    checkJustif = YES;
+    justifLabel.text = @"MODIFIER LE JUSTIFICATIF";
+    [self checkForm];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
@@ -399,11 +436,45 @@
 }
 
 - (IBAction)btnFinishOnClick:(id)sender {
+    /*
+    [[DSAAPIClient sharedApiInstance] enableFirstResponder:YES withPhoneNumber:self.txtPhoneNumber.text  withType:self.skillId withFirstName:self.txtFirstName.text withLastName:self.txtLastName.text withEmail:self.txtEmail.text withIndicatif:self.txtFlagMobile.text withImage:self.imageJustif withToken:self.pushCredentialsToken withEnvironment:environment success:^{
+        NSLog(@"Push Credentials BS : %@", self.pushCredentialsToken);
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:self.txtPhoneNumber.text forKey:kNUD_FIRSTRESPONDER_NUMBER];
+        [defaults setObject:self.txtFirstName.text forKey:kNUD_FIRSTRESPONDER_FIRSTNAME];
+        [defaults setObject:self.txtLastName.text forKey:kNUD_FIRSTRESPONDER_LASTNAME];
+        [defaults setObject:self.txtEmail.text forKey:kNUD_FIRSTRESPONDER_EMAIL];
+        
+        [defaults setObject:self.skillId forKey:kNUD_FIRSTRESPONDER_PROFIL];
+        
+        [defaults setObject:self.txtFlagMobile.text forKey:kNUD_FIRSTRESPONDER_FLAG];
+        [defaults setBool:YES forKey:kNUD_FIRSTRESPONDER_ACTIVATE];
+        [defaults synchronize];
+        
+        [[[UIAlertView alloc] initWithTitle:AMLocalizedString(@"FIRSTRESPONDER_ALERT_TITLE", @"") message:AMLocalizedString(@"FIRSTRESPONDER_ALERT_MSG_CONFIRM", @"") delegate:self cancelButtonTitle:AMLocalizedString(@"OK", @"") otherButtonTitles:nil, nil] show];
+        [self.aiSend stopAnimating];
+        [self.view setUserInteractionEnabled:YES];
+        
+    } failure:^(NSError *error) {
+        
+        [[[UIAlertView alloc] initWithTitle:AMLocalizedString(@"APP_NAME", @"") message:AMLocalizedString(@"FIRSTRESPONDER_ALERT_MSG_ERROR", @"") delegate:nil cancelButtonTitle:AMLocalizedString(@"OK", @"") otherButtonTitles:nil, nil] show];
+        [self.aiSend stopAnimating];
+        [self.view setUserInteractionEnabled:YES];
+    }];
+    */
+    
     UIAlertView *notificationAlert = [[UIAlertView alloc] initWithTitle:@"Bon samaritain"    message:@"Votre inscription a bien été prise en compte."
                                                                delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     
     [notificationAlert show];
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (IBAction)justifInfo:(UIButton *)sender {
+    UIAlertView *notificationAlert = [[UIAlertView alloc] initWithTitle:@"Information"    message:@"Merci de joindre un justificatif :\n\n- un certificat\n- un document\n - blabla\n\nattestant de votre formation aux gestes de premiers secours.\n\nMerci de ne pas joindre un selfie de vous en train d'imiter une autruche."
+                                                               delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    
+    [notificationAlert show];
 }
 
 @end
