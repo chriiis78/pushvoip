@@ -12,17 +12,18 @@
 @implementation BSRegisterFifthViewController
 
 @synthesize skillPicker;
-@synthesize skillButton;
 @synthesize skillText;
 @synthesize skillList;
 @synthesize skillId;
 @synthesize currentTextField;
-@synthesize dateButton;
+@synthesize dateLabel;
 @synthesize datePicker;
 @synthesize dateText;
-@synthesize lineDateButton;
 @synthesize lineDateText;
 @synthesize lineDateTextBottom;
+@synthesize lineDateContraint;
+@synthesize imageJustif;
+@synthesize btJustif;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,11 +34,13 @@
     self.navigationItem.leftBarButtonItem = btnLogout;
 
     [self initSkillList];
-    lineDateButton.hidden = YES;
     lineDateText.hidden = YES;
     lineDateTextBottom.hidden = YES;
-    dateButton.hidden = YES;
+    dateLabel.hidden = YES;
     dateText.hidden = YES;
+    lineDateContraint.constant = 45;
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
     
     skillPicker = [[UIPickerView alloc] init];
     skillPicker.showsSelectionIndicator = YES;
@@ -49,6 +52,9 @@
     dateText.inputView = datePicker;
     dateText.inputAccessoryView = [UITextField closeToolbarWithTarget:self andSelector:@selector(resignAllResponder)];
     [datePicker addTarget:self action:@selector(pickerChanged:)               forControlEvents:UIControlEventValueChanged];
+    self.imageJustif = nil;
+    [btJustif.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    NSLog(@"viewDidLoad");
 }
 
 - (void)initSkillList
@@ -94,6 +100,10 @@
                                                    dateStyle:NSDateFormatterShortStyle
                                                    timeStyle:NSDateFormatterNoStyle];
 }
+- (void)viewDidAppear:(BOOL)animated
+{
+    lineDateContraint.constant = -45;
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -104,6 +114,7 @@
             [skillPicker selectRow:i inComponent:0 animated:NO];
         }
     }
+    lineDateContraint.constant = -45;
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -199,19 +210,31 @@
     
     NSString *expiration = [[self.skillList objectAtIndex:row] objectForKey:@"EXPIRATION"];
     expiration = [NSString stringWithFormat:@"%@", expiration];
-    
+    [self.view layoutIfNeeded];
     if ([expiration isEqual:@"1"]){
-        lineDateButton.hidden = NO;
-        lineDateText.hidden = NO;
-        lineDateTextBottom.hidden = NO;
-        dateButton.hidden = NO;
-        dateText.hidden = NO;
+        [UIView animateWithDuration:0.2 animations:^{
+            lineDateText.hidden = NO;
+            lineDateTextBottom.hidden = NO;
+            dateLabel.hidden = NO;
+            dateText.hidden = NO;
+            lineDateContraint.constant = 38;
+            
+            // Make the animation happen
+            [self.view setNeedsLayout];
+            [self.view layoutIfNeeded];
+        }];
     }else if ([expiration isEqual:@"0"]){
-        lineDateButton.hidden = YES;
-        lineDateText.hidden = YES;
-        lineDateTextBottom.hidden = YES;
-        dateButton.hidden = YES;
-        dateText.hidden = YES;
+        [UIView animateWithDuration:0.2 animations:^{
+            lineDateText.hidden = YES;
+            lineDateTextBottom.hidden = YES;
+            dateLabel.hidden = YES;
+            dateText.hidden = YES;
+            lineDateContraint.constant = -45;
+            
+            // Make the animation happen
+            [self.view setNeedsLayout];
+            [self.view layoutIfNeeded];
+        }];
     }
     
 }
@@ -228,16 +251,11 @@
     [dateText resignFirstResponder];
 }
 
-- (IBAction)skillButton:(UIButton *)sender {
-    [skillText becomeFirstResponder];
-}
-- (IBAction)dateButton:(UIButton *)sender {
-    [dateText becomeFirstResponder];
-}
 
-/*
+
+
 #pragma mark - Camera button Callback method
-
+/*
 - (IBAction)btDelJustifTapped:(UIButton *)sender {
     
     [[DSAAPIClient sharedApiInstance] deleteJustifWithSuccess:^{
@@ -249,27 +267,31 @@
     }];
 }
 
+*/
+ 
 - (IBAction)pictureButtonHasBeenTapped:(UIButton *)sender {
     UIActionSheet *actionSheet;
     //if(!self.imageJustif) {
     actionSheet = [[UIActionSheet alloc] initWithTitle: nil
                                               delegate: self
-                                     cancelButtonTitle: AMLocalizedString(@"CANCEL",nil)
+                                     cancelButtonTitle: @"CANCEL"
                                 destructiveButtonTitle: nil
-                                     otherButtonTitles: AMLocalizedString(@"TAKE_A_NEW_PHOTO",nil),AMLocalizedString(@"CHOOSE_PHOTO_FROM_LIBRARY",nil), nil];
+                                     otherButtonTitles: @"TAKE_A_NEW_PHOTO",@"CHOOSE_PHOTO_FROM_LIBRARY", nil];
     [actionSheet showInView:self.view];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if(buttonIndex == actionSheet.destructiveButtonIndex) {
         self.imageJustif = nil;
-        [self.btJustif setTitle:AMLocalizedString(@"FIRSTRESPONDER_LABEL_BT_NEWJUSTIF", nil) forState:UIControlStateNormal];
+        [self.btJustif setTitle:@"FIRSTRESPONDER_LABEL_BT_NEWJUSTIF" forState:UIControlStateNormal];
     }
     else if(buttonIndex != actionSheet.cancelButtonIndex){
         
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         if(buttonIndex == actionSheet.firstOtherButtonIndex) {
             picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            
+            NSLog(@"competence %@ %@", skillId, skillText.text);
         }
         else if(buttonIndex == actionSheet.firstOtherButtonIndex+1) {
             picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -285,22 +307,25 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES completion:nil];
-    
+    /*
     UIImage *croppedImage = nil;
     
     if (image.size.width > image.size.height)
         croppedImage = [UIImage imageWithImage:image scaledToSize:CGSizeMake(267, 200)];
     else
         croppedImage = [UIImage imageWithImage:image scaledToSize:CGSizeMake(200, 267)];
+    */
+    self.imageJustif = UIImageJPEGRepresentation(image, 0.5);
     
-    self.imageJustif = UIImageJPEGRepresentation(croppedImage, 0.5);
     [self saveImage:self.imageJustif];
     
+    [btJustif setContentMode:UIViewContentModeScaleAspectFit];
+    [btJustif setImage:image forState:UIControlStateNormal];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self.btJustif setTitle:AMLocalizedString(@"FIRSTRESPONDER_LABEL_BT_JUSTIF", nil) forState:UIControlStateNormal];
+    [self.btJustif setTitle:@"FIRSTRESPONDER_LABEL_BT_JUSTIF" forState:UIControlStateNormal];
 }
 
 
@@ -348,11 +373,11 @@
 - (void)refreshLayout
 {
     if ([self hasJustif]) {
-        [self.btJustif setTitle:AMLocalizedString(@"FIRSTRESPONDER_LABEL_BT_NEWJUSTIF", nil) forState:UIControlStateNormal];
+        [self.btJustif setTitle:@"FIRSTRESPONDER_LABEL_BT_NEWJUSTIF" forState:UIControlStateNormal];
     }else{
-        [self.btJustif setTitle:AMLocalizedString(@"FIRSTRESPONDER_LABEL_BT_JUSTIF", nil) forState:UIControlStateNormal];
+        [self.btJustif setTitle:@"FIRSTRESPONDER_LABEL_BT_JUSTIF" forState:UIControlStateNormal];
     }
-    
+    /*
     [self.btDelJustif setHidden:![self hasJustif]];
     
     if([self.btDelJustif isHidden]){
@@ -361,9 +386,12 @@
     }else{
         [self.viewCondition setFrame:CGRectMake(self.viewCondition.frame.origin.x, self.btDelJustif.frame.origin.y+30, self.viewCondition.frame.size.width, self.viewCondition.frame.size.height)];
     }
+     */
 }
 
-*/
+
+ 
+
 
 -(void)btnOnClick:(id)sender
 {

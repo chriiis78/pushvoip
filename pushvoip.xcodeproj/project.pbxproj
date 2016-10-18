@@ -220,6 +220,7 @@
 		6BCD1FA41DA6850100AC41E6 /* checkboxOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1FA01DA6850100AC41E6 /* checkboxOff@2x.png */; };
 		6BCD1FA51DA6850100AC41E6 /* checkboxOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1FA11DA6850100AC41E6 /* checkboxOn.png */; };
 		6BCD1FA61DA6850100AC41E6 /* checkboxOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1FA21DA6850100AC41E6 /* checkboxOn@2x.png */; };
+		6BCE5DC81DB60ABE006C44EF /* certificat.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE5DC71DB60ABE006C44EF /* certificat.png */; };
 		6BD060E01D9A78920040EED0 /* BSRegisterNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060DF1D9A78920040EED0 /* BSRegisterNavigationController.m */; };
 		6BD060E31D9A7CCE0040EED0 /* BSRegisterFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060E21D9A7CCE0040EED0 /* BSRegisterFirstViewController.m */; };
 		6BD060E61D9A9C8D0040EED0 /* BSRegisterSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD060E51D9A9C8D0040EED0 /* BSRegisterSecondViewController.m */; };
@@ -521,6 +522,7 @@
 		6BCD1FA01DA6850100AC41E6 /* checkboxOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkboxOff@2x.png"; sourceTree = "<group>"; };
 		6BCD1FA11DA6850100AC41E6 /* checkboxOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxOn.png; sourceTree = "<group>"; };
 		6BCD1FA21DA6850100AC41E6 /* checkboxOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkboxOn@2x.png"; sourceTree = "<group>"; };
+		6BCE5DC71DB60ABE006C44EF /* certificat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = certificat.png; sourceTree = "<group>"; };
 		6BD060DE1D9A78920040EED0 /* BSRegisterNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterNavigationController.h; sourceTree = "<group>"; };
 		6BD060DF1D9A78920040EED0 /* BSRegisterNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRegisterNavigationController.m; sourceTree = "<group>"; };
 		6BD060E11D9A7CCE0040EED0 /* BSRegisterFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRegisterFirstViewController.h; sourceTree = "<group>"; };
@@ -633,6 +635,7 @@
 		6BC306731DA4FA2B002A09E6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6BCE5DC71DB60ABE006C44EF /* certificat.png */,
 				6B68FBF21DAFCDDD0013F66A /* cross.png */,
 				6B68FBF41DAFCE070013F66A /* cross@2x.png */,
 				6BCD1F9F1DA6850100AC41E6 /* checkboxOff.png */,
@@ -1199,6 +1202,7 @@
 				6BC307951DA4FA2B002A09E6 /* KWT@2x.png in Resources */,
 				6BC307F31DA4FA2B002A09E6 /* VTC@2x.png in Resources */,
 				6BC307931DA4FA2B002A09E6 /* KOR@2x.png in Resources */,
+				6BCE5DC81DB60ABE006C44EF /* certificat.png in Resources */,
 				6BC307DD1DA4FA2B002A09E6 /* SYR@2x.png in Resources */,
 				6BC3073A1DA4FA2B002A09E6 /* ARE@2x.png in Resources */,
 				6BC307471DA4FA2B002A09E6 /* BHR@2x.png in Resources */,
