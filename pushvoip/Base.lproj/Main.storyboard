@@ -2052,7 +2052,7 @@ générales d'utilisation</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3z-In-EkE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.91602585079999999" green="0.91602585079999999" blue="0.91602585079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.03464439655172414" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="certificat.png"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -2063,7 +2063,7 @@ générales d'utilisation</string>
                                     <action selector="pictureButtonHasBeenTapped:" destination="XKr-Bf-rp1" eventType="touchUpInside" id="4KL-6X-dbt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOINDRE UN JUSTIFICATIF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-Rm-dpy">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOINDRE UN JUSTIFICATIF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-Rm-dpy">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -2072,6 +2072,11 @@ générales d'utilisation</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="cb2-gZ-ecf"/>
@@ -2139,6 +2144,26 @@ générales d'utilisation</string>
                                     <action selector="justifInfo:" destination="XKr-Bf-rp1" eventType="touchUpInside" id="SIV-jf-gQ5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snN-zJ-dlc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KMF-3c-Buh"/>
+                                    <constraint firstAttribute="width" constant="50" id="uwB-Ww-23r"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="add2.png"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KMF-3c-Buh"/>
+                                        <exclude reference="uwB-Ww-23r"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="KMF-3c-Buh"/>
+                                        <include reference="uwB-Ww-23r"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2146,6 +2171,7 @@ générales d'utilisation</string>
                             <constraint firstItem="E1N-Kc-lF4" firstAttribute="bottom" secondItem="f7q-PU-dlc" secondAttribute="bottom" id="3Bh-yI-hfe"/>
                             <constraint firstItem="tMq-r8-ox7" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leadingMargin" id="5Jh-qj-5gb"/>
                             <constraint firstItem="ybW-U0-gS5" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leadingMargin" id="6Bx-VH-fIb"/>
+                            <constraint firstItem="snN-zJ-dlc" firstAttribute="top" secondItem="Y3z-In-EkE" secondAttribute="top" id="77c-9K-haW"/>
                             <constraint firstItem="p7Z-HW-ZAi" firstAttribute="top" secondItem="EZb-gn-cQB" secondAttribute="bottom" constant="8" symbolic="YES" id="89T-zP-5cX">
                                 <variation key="widthClass=compact" constant="15"/>
                             </constraint>
@@ -2157,6 +2183,7 @@ générales d'utilisation</string>
                             <constraint firstItem="E1N-Kc-lF4" firstAttribute="top" secondItem="olz-un-B7J" secondAttribute="bottom" constant="15" id="JHi-5u-aPe"/>
                             <constraint firstItem="9Lm-7g-hRZ" firstAttribute="top" secondItem="olz-un-B7J" secondAttribute="top" id="QVb-ac-rGX"/>
                             <constraint firstItem="EZb-gn-cQB" firstAttribute="top" secondItem="GJR-Rm-dpy" secondAttribute="bottom" constant="40" id="Seg-5a-x5m"/>
+                            <constraint firstItem="snN-zJ-dlc" firstAttribute="trailing" secondItem="dwz-x4-B7x" secondAttribute="trailing" id="TvM-uM-yk4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EZb-gn-cQB" secondAttribute="trailing" id="U3G-1k-s8d"/>
                             <constraint firstItem="ybW-U0-gS5" firstAttribute="trailing" secondItem="Fut-lP-OeV" secondAttribute="trailingMargin" id="Vgv-IO-rH7"/>
                             <constraint firstItem="iqW-EH-BeK" firstAttribute="leading" secondItem="f7q-PU-dlc" secondAttribute="leading" id="WXh-UN-yCj"/>
@@ -2164,7 +2191,9 @@ générales d'utilisation</string>
                             <constraint firstAttribute="trailingMargin" secondItem="olz-un-B7J" secondAttribute="trailing" id="Yd1-cP-lOX"/>
                             <constraint firstItem="yPc-bF-3KE" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leadingMargin" id="bdF-L0-Ben"/>
                             <constraint firstItem="EZb-gn-cQB" firstAttribute="top" secondItem="Y3z-In-EkE" secondAttribute="bottom" constant="8" id="bup-4V-obL"/>
-                            <constraint firstItem="GJR-Rm-dpy" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leadingMargin" id="cvh-5o-KkB"/>
+                            <constraint firstItem="GJR-Rm-dpy" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leadingMargin" id="cvh-5o-KkB">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstItem="f7q-PU-dlc" firstAttribute="leading" secondItem="9Lm-7g-hRZ" secondAttribute="leading" id="dgb-oA-plT"/>
                             <constraint firstItem="f7q-PU-dlc" firstAttribute="trailing" secondItem="9Lm-7g-hRZ" secondAttribute="trailing" id="fXb-wn-klx"/>
                             <constraint firstItem="9Lm-7g-hRZ" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leading" id="fhW-Ee-J33"/>
@@ -2181,7 +2210,9 @@ générales d'utilisation</string>
                             <constraint firstItem="olz-un-B7J" firstAttribute="leading" secondItem="Fut-lP-OeV" secondAttribute="leadingMargin" id="qgp-VT-rm1"/>
                             <constraint firstItem="ybW-U0-gS5" firstAttribute="top" secondItem="f7q-PU-dlc" secondAttribute="top" id="r5c-ym-M5W"/>
                             <constraint firstItem="SJh-wt-T75" firstAttribute="leading" secondItem="f7q-PU-dlc" secondAttribute="leading" id="sAH-Iq-YRU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GJR-Rm-dpy" secondAttribute="trailing" id="tqv-U3-mA1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GJR-Rm-dpy" secondAttribute="trailing" id="tqv-U3-mA1">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstItem="dwz-x4-B7x" firstAttribute="centerY" secondItem="yPc-bF-3KE" secondAttribute="centerY" id="uIG-sd-juj"/>
                             <constraint firstItem="Y3z-In-EkE" firstAttribute="top" secondItem="yPc-bF-3KE" secondAttribute="bottom" constant="8" id="vM9-nH-tbp"/>
                             <constraint firstItem="iqW-EH-BeK" firstAttribute="top" secondItem="f7q-PU-dlc" secondAttribute="bottom" id="yPd-n4-zfd">
@@ -2203,6 +2234,7 @@ générales d'utilisation</string>
                                 <exclude reference="ybW-U0-gS5"/>
                                 <exclude reference="E1N-Kc-lF4"/>
                                 <exclude reference="dwz-x4-B7x"/>
+                                <exclude reference="snN-zJ-dlc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2lL-Gq-i4T"/>
@@ -2239,6 +2271,8 @@ générales d'utilisation</string>
                                 <exclude reference="k0B-rn-h1r"/>
                                 <exclude reference="l2v-lN-Bku"/>
                                 <exclude reference="uIG-sd-juj"/>
+                                <exclude reference="77c-9K-haW"/>
+                                <exclude reference="TvM-uM-yk4"/>
                                 <exclude reference="Ilj-su-9IF"/>
                                 <exclude reference="Seg-5a-x5m"/>
                                 <exclude reference="U3G-1k-s8d"/>
@@ -2261,6 +2295,7 @@ générales d'utilisation</string>
                                 <include reference="ybW-U0-gS5"/>
                                 <include reference="E1N-Kc-lF4"/>
                                 <include reference="dwz-x4-B7x"/>
+                                <include reference="snN-zJ-dlc"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2lL-Gq-i4T"/>
@@ -2297,6 +2332,8 @@ générales d'utilisation</string>
                                 <include reference="k0B-rn-h1r"/>
                                 <include reference="l2v-lN-Bku"/>
                                 <include reference="uIG-sd-juj"/>
+                                <include reference="77c-9K-haW"/>
+                                <include reference="TvM-uM-yk4"/>
                                 <include reference="Ilj-su-9IF"/>
                                 <include reference="Seg-5a-x5m"/>
                                 <include reference="U3G-1k-s8d"/>
@@ -2311,7 +2348,7 @@ générales d'utilisation</string>
                         <outlet property="dateLabel" destination="E1N-Kc-lF4" id="bAk-VK-PCq"/>
                         <outlet property="datePicker" destination="ybW-U0-gS5" id="Xv0-mt-d7o"/>
                         <outlet property="dateText" destination="ybW-U0-gS5" id="8bR-YI-b6H"/>
-                        <outlet property="justifLabel" destination="GJR-Rm-dpy" id="RzL-0p-LRG"/>
+                        <outlet property="justifLogo" destination="snN-zJ-dlc" id="JCU-TD-JU7"/>
                         <outlet property="lineDateContraint" destination="yPd-n4-zfd" id="yr0-Md-h9I"/>
                         <outlet property="lineDateText" destination="f7q-PU-dlc" id="udm-bQ-jux"/>
                         <outlet property="lineDateTextBottom" destination="iqW-EH-BeK" id="wgo-78-jh7"/>
@@ -2326,6 +2363,7 @@ générales d'utilisation</string>
     <resources>
         <image name="AFG.png" width="35" height="23"/>
         <image name="FRA@2x.png" width="16" height="16"/>
+        <image name="add2.png" width="200" height="200"/>
         <image name="certificat.png" width="611" height="512"/>
         <image name="checkboxOff.png" width="20" height="21"/>
     </resources>

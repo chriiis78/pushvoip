@@ -24,7 +24,7 @@
 @synthesize lineDateContraint;
 @synthesize imageJustif;
 @synthesize btJustif;
-@synthesize justifLabel;
+@synthesize justifLogo;
 @synthesize checkJustif;
 @synthesize expirationStatus;
 @synthesize expirationDate;
@@ -356,7 +356,7 @@
     [btJustif setContentMode:UIViewContentModeScaleAspectFit];
     [btJustif setImage:image forState:UIControlStateNormal];
     checkJustif = YES;
-    justifLabel.text = @"MODIFIER LE JUSTIFICATIF";
+    [justifLogo setImage:[UIImage imageNamed:@"edit2.png"] forState:UIControlStateNormal];
     [self checkForm];
 }
 

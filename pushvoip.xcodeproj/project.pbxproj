@@ -216,6 +216,10 @@
 		6BC307F71DA4FA2B002A09E6 /* ZAF@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC307341DA4FA2B002A09E6 /* ZAF@2x.png */; };
 		6BC307F81DA4FA2B002A09E6 /* ZMB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC307351DA4FA2B002A09E6 /* ZMB@2x.png */; };
 		6BC307F91DA4FA2B002A09E6 /* ZWE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC307361DA4FA2B002A09E6 /* ZWE@2x.png */; };
+		6BCAE7861DB7683D0002B43C /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCAE7841DB7683D0002B43C /* add.png */; };
+		6BCAE7871DB7683D0002B43C /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCAE7851DB7683D0002B43C /* edit.png */; };
+		6BCAE7971DB77DD50002B43C /* add2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCAE7961DB77DD50002B43C /* add2.png */; };
+		6BCAE7991DB77F690002B43C /* edit2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCAE7981DB77F690002B43C /* edit2.png */; };
 		6BCD1FA31DA6850100AC41E6 /* checkboxOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1F9F1DA6850100AC41E6 /* checkboxOff.png */; };
 		6BCD1FA41DA6850100AC41E6 /* checkboxOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1FA01DA6850100AC41E6 /* checkboxOff@2x.png */; };
 		6BCD1FA51DA6850100AC41E6 /* checkboxOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD1FA11DA6850100AC41E6 /* checkboxOn.png */; };
@@ -518,6 +522,10 @@
 		6BC307341DA4FA2B002A09E6 /* ZAF@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZAF@2x.png"; sourceTree = "<group>"; };
 		6BC307351DA4FA2B002A09E6 /* ZMB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZMB@2x.png"; sourceTree = "<group>"; };
 		6BC307361DA4FA2B002A09E6 /* ZWE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZWE@2x.png"; sourceTree = "<group>"; };
+		6BCAE7841DB7683D0002B43C /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		6BCAE7851DB7683D0002B43C /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		6BCAE7961DB77DD50002B43C /* add2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add2.png; sourceTree = "<group>"; };
+		6BCAE7981DB77F690002B43C /* edit2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit2.png; sourceTree = "<group>"; };
 		6BCD1F9F1DA6850100AC41E6 /* checkboxOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxOff.png; sourceTree = "<group>"; };
 		6BCD1FA01DA6850100AC41E6 /* checkboxOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkboxOff@2x.png"; sourceTree = "<group>"; };
 		6BCD1FA11DA6850100AC41E6 /* checkboxOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxOn.png; sourceTree = "<group>"; };
@@ -635,6 +643,10 @@
 		6BC306731DA4FA2B002A09E6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6BCAE7841DB7683D0002B43C /* add.png */,
+				6BCAE7851DB7683D0002B43C /* edit.png */,
+				6BCAE7961DB77DD50002B43C /* add2.png */,
+				6BCAE7981DB77F690002B43C /* edit2.png */,
 				6BCE5DC71DB60ABE006C44EF /* certificat.png */,
 				6B68FBF21DAFCDDD0013F66A /* cross.png */,
 				6B68FBF41DAFCE070013F66A /* cross@2x.png */,
@@ -1147,6 +1159,7 @@
 				6BC3077B1DA4FA2B002A09E6 /* GRD@2x.png in Resources */,
 				6BC307EF1DA4FA2B002A09E6 /* UZB@2x.png in Resources */,
 				6BC307D61DA4FA2B002A09E6 /* STP@2x.png in Resources */,
+				6BCAE7971DB77DD50002B43C /* add2.png in Resources */,
 				6BC307CB1DA4FA2B002A09E6 /* SCG@2x.png in Resources */,
 				6BC307B91DA4FA2B002A09E6 /* NRU@2x.png in Resources */,
 				6BC3078E1DA4FA2B002A09E6 /* KEN@2x.png in Resources */,
@@ -1155,6 +1168,7 @@
 				6BC3074B1DA4FA2B002A09E6 /* BLZ@2x.png in Resources */,
 				6BC307BB1DA4FA2B002A09E6 /* OMN@2x.png in Resources */,
 				6BC307CE1DA4FA2B002A09E6 /* SGP@2x.png in Resources */,
+				6BCAE7861DB7683D0002B43C /* add.png in Resources */,
 				6BC307E71DA4FA2B002A09E6 /* TUR@2x.png in Resources */,
 				6BC307821DA4FA2B002A09E6 /* IDN@2x.png in Resources */,
 				6BC307831DA4FA2B002A09E6 /* IND@2x.png in Resources */,
@@ -1279,6 +1293,7 @@
 				6BC307911DA4FA2B002A09E6 /* KIR@2x.png in Resources */,
 				6BC3074D1DA4FA2B002A09E6 /* BRA@2x.png in Resources */,
 				6BC3077F1DA4FA2B002A09E6 /* HRV@2x.png in Resources */,
+				6BCAE7991DB77F690002B43C /* edit2.png in Resources */,
 				6BC307971DA4FA2B002A09E6 /* LBN@2x.png in Resources */,
 				6BC3076F1DA4FA2B002A09E6 /* FJI@2x.png in Resources */,
 				6BC3074A1DA4FA2B002A09E6 /* BLR@2x.png in Resources */,
@@ -1305,6 +1320,7 @@
 				6BCD1FA51DA6850100AC41E6 /* checkboxOn.png in Resources */,
 				6BC3076A1DA4FA2B002A09E6 /* ERI@2x.png in Resources */,
 				6BC307891DA4FA2B002A09E6 /* ITA@2x.png in Resources */,
+				6BCAE7871DB7683D0002B43C /* edit.png in Resources */,
 				6BC3073E1DA4FA2B002A09E6 /* AUS@2x.png in Resources */,
 				6BC307981DA4FA2B002A09E6 /* LBR@2x.png in Resources */,
 				6BC307751DA4FA2B002A09E6 /* GHA@2x.png in Resources */,
