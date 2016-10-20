@@ -35,8 +35,8 @@
     self.title = @"Compétence";
     
     
-    UIBarButtonItem *btnLogout = [[UIBarButtonItem alloc]initWithTitle:@"Annuler" style:UIBarButtonItemStyleDone target:self action:@selector(btnOnClick:)];
-    self.navigationItem.leftBarButtonItem = btnLogout;
+    //UIBarButtonItem *btnLogout = [[UIBarButtonItem alloc]initWithTitle:@"Annuler" style:UIBarButtonItemStyleDone target:self action:@selector(btnOnClick:)];
+    //self.navigationItem.leftBarButtonItem = btnLogout;
 
     [self initSkillList];
     lineDateText.hidden = YES;
@@ -51,12 +51,15 @@
     skillPicker.delegate = self;
     skillText.inputView = skillPicker;
     skillText.inputAccessoryView = [UITextField closeToolbarWithTarget:self andSelector:@selector(resignAllResponder)];
+    UIColor *color = [UIColor colorWithRed:0.000323687 green:0.69973 blue:0.231126 alpha:1];
+    skillText.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Choisir votre compétence" attributes:@{NSForegroundColorAttributeName: color}];
     
     datePicker = [[UIDatePicker alloc] init];
     datePicker.datePickerMode = UIDatePickerModeDate;
     dateText.inputView = datePicker;
     dateText.inputAccessoryView = [UITextField closeToolbarWithTarget:self andSelector:@selector(resignAllResponder)];
     [datePicker addTarget:self action:@selector(pickerChanged:)               forControlEvents:UIControlEventValueChanged];
+    dateText.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Choisir la date de fin de validité" attributes:@{NSForegroundColorAttributeName: color}];
     
     self.imageJustif = nil;
     [btJustif.imageView setContentMode:UIViewContentModeScaleAspectFit];

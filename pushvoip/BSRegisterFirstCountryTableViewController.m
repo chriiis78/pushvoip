@@ -78,6 +78,7 @@
         [newTitleArray addObject:[collections objectAtIndex:i]];
     }
     sections = newArray;
+    NSLog(@"sections %@", sortedCountryDict);
     sectionTitles = newTitleArray;
     [self.tableView reloadData];
 }
@@ -155,7 +156,9 @@
     [vca.countryName setTitle: [self.tableView cellForRowAtIndexPath:selectedPath].textLabel.text forState:UIControlStateNormal];
     [vca.countryFlag setImage: [self.tableView cellForRowAtIndexPath:selectedPath].imageView.image forState:UIControlStateNormal];
     vca.callingCode.text = [self.tableView cellForRowAtIndexPath:selectedPath].detailTextLabel.text;
-
-}
+    NSArray *country = [sortedCountryDict valueForKey:[self.tableView cellForRowAtIndexPath:selectedPath].textLabel.text];
+    NSLog(@"countryCode %@", vca.countryCode);
+    vca.countryCode = [country objectAtIndex:1];
+ }
 
 @end

@@ -216,6 +216,24 @@
 		6BC307F71DA4FA2B002A09E6 /* ZAF@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC307341DA4FA2B002A09E6 /* ZAF@2x.png */; };
 		6BC307F81DA4FA2B002A09E6 /* ZMB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC307351DA4FA2B002A09E6 /* ZMB@2x.png */; };
 		6BC307F91DA4FA2B002A09E6 /* ZWE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC307361DA4FA2B002A09E6 /* ZWE@2x.png */; };
+		6BC4091D1DB8C24700390908 /* NBAsYouTypeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC408FB1DB8C24700390908 /* NBAsYouTypeFormatter.m */; };
+		6BC4091E1DB8C24700390908 /* NBMetadataCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC408FD1DB8C24700390908 /* NBMetadataCore.m */; };
+		6BC4091F1DB8C24700390908 /* NBMetadataCoreMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC408FF1DB8C24700390908 /* NBMetadataCoreMapper.m */; };
+		6BC409201DB8C24700390908 /* NBMetadataCoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC409011DB8C24700390908 /* NBMetadataCoreTest.m */; };
+		6BC409211DB8C24700390908 /* NBMetadataCoreTestMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC409031DB8C24700390908 /* NBMetadataCoreTestMapper.m */; };
+		6BC409221DB8C24700390908 /* NBMetadataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC409051DB8C24700390908 /* NBMetadataHelper.m */; };
+		6BC409231DB8C24700390908 /* NBNumberFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC409071DB8C24700390908 /* NBNumberFormat.m */; };
+		6BC409241DB8C24700390908 /* NBPhoneMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC409091DB8C24700390908 /* NBPhoneMetaData.m */; };
+		6BC409251DB8C24700390908 /* NBPhoneMetaDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4090B1DB8C24700390908 /* NBPhoneMetaDataGenerator.m */; };
+		6BC409261DB8C24700390908 /* NBPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4090D1DB8C24700390908 /* NBPhoneNumber.m */; };
+		6BC409271DB8C24700390908 /* NBPhoneNumberDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4090F1DB8C24700390908 /* NBPhoneNumberDefines.m */; };
+		6BC409281DB8C24700390908 /* NBPhoneNumberDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC409111DB8C24700390908 /* NBPhoneNumberDesc.m */; };
+		6BC4092A1DB8C24700390908 /* NBPhoneNumberUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC409141DB8C24700390908 /* NBPhoneNumberUtil.m */; };
+		6BC4092D1DB8C2B000390908 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC4092C1DB8C2B000390908 /* CoreTelephony.framework */; };
+		6BC4092F1DB912BD00390908 /* bon-samaritain-900.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC4092E1DB912BD00390908 /* bon-samaritain-900.png */; };
+		6BC409311DB9134500390908 /* bon-samaritain-900.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BC409301DB9134500390908 /* bon-samaritain-900.jpg */; };
+		6BC409331DB9141400390908 /* bon-samaritain-80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BC409321DB9141400390908 /* bon-samaritain-80.jpg */; };
+		6BC409371DB9157400390908 /* bon-samaritain-300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BC409361DB9157400390908 /* bon-samaritain-300.jpg */; };
 		6BCAE7861DB7683D0002B43C /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCAE7841DB7683D0002B43C /* add.png */; };
 		6BCAE7871DB7683D0002B43C /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCAE7851DB7683D0002B43C /* edit.png */; };
 		6BCAE7971DB77DD50002B43C /* add2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCAE7961DB77DD50002B43C /* add2.png */; };
@@ -522,6 +540,37 @@
 		6BC307341DA4FA2B002A09E6 /* ZAF@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZAF@2x.png"; sourceTree = "<group>"; };
 		6BC307351DA4FA2B002A09E6 /* ZMB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZMB@2x.png"; sourceTree = "<group>"; };
 		6BC307361DA4FA2B002A09E6 /* ZWE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZWE@2x.png"; sourceTree = "<group>"; };
+		6BC408FA1DB8C24700390908 /* NBAsYouTypeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBAsYouTypeFormatter.h; sourceTree = "<group>"; };
+		6BC408FB1DB8C24700390908 /* NBAsYouTypeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBAsYouTypeFormatter.m; sourceTree = "<group>"; };
+		6BC408FC1DB8C24700390908 /* NBMetadataCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBMetadataCore.h; sourceTree = "<group>"; };
+		6BC408FD1DB8C24700390908 /* NBMetadataCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBMetadataCore.m; sourceTree = "<group>"; };
+		6BC408FE1DB8C24700390908 /* NBMetadataCoreMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBMetadataCoreMapper.h; sourceTree = "<group>"; };
+		6BC408FF1DB8C24700390908 /* NBMetadataCoreMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBMetadataCoreMapper.m; sourceTree = "<group>"; };
+		6BC409001DB8C24700390908 /* NBMetadataCoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBMetadataCoreTest.h; sourceTree = "<group>"; };
+		6BC409011DB8C24700390908 /* NBMetadataCoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBMetadataCoreTest.m; sourceTree = "<group>"; };
+		6BC409021DB8C24700390908 /* NBMetadataCoreTestMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBMetadataCoreTestMapper.h; sourceTree = "<group>"; };
+		6BC409031DB8C24700390908 /* NBMetadataCoreTestMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBMetadataCoreTestMapper.m; sourceTree = "<group>"; };
+		6BC409041DB8C24700390908 /* NBMetadataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBMetadataHelper.h; sourceTree = "<group>"; };
+		6BC409051DB8C24700390908 /* NBMetadataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBMetadataHelper.m; sourceTree = "<group>"; };
+		6BC409061DB8C24700390908 /* NBNumberFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNumberFormat.h; sourceTree = "<group>"; };
+		6BC409071DB8C24700390908 /* NBNumberFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNumberFormat.m; sourceTree = "<group>"; };
+		6BC409081DB8C24700390908 /* NBPhoneMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPhoneMetaData.h; sourceTree = "<group>"; };
+		6BC409091DB8C24700390908 /* NBPhoneMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPhoneMetaData.m; sourceTree = "<group>"; };
+		6BC4090A1DB8C24700390908 /* NBPhoneMetaDataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPhoneMetaDataGenerator.h; sourceTree = "<group>"; };
+		6BC4090B1DB8C24700390908 /* NBPhoneMetaDataGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPhoneMetaDataGenerator.m; sourceTree = "<group>"; };
+		6BC4090C1DB8C24700390908 /* NBPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPhoneNumber.h; sourceTree = "<group>"; };
+		6BC4090D1DB8C24700390908 /* NBPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPhoneNumber.m; sourceTree = "<group>"; };
+		6BC4090E1DB8C24700390908 /* NBPhoneNumberDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPhoneNumberDefines.h; sourceTree = "<group>"; };
+		6BC4090F1DB8C24700390908 /* NBPhoneNumberDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPhoneNumberDefines.m; sourceTree = "<group>"; };
+		6BC409101DB8C24700390908 /* NBPhoneNumberDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPhoneNumberDesc.h; sourceTree = "<group>"; };
+		6BC409111DB8C24700390908 /* NBPhoneNumberDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPhoneNumberDesc.m; sourceTree = "<group>"; };
+		6BC409131DB8C24700390908 /* NBPhoneNumberUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPhoneNumberUtil.h; sourceTree = "<group>"; };
+		6BC409141DB8C24700390908 /* NBPhoneNumberUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPhoneNumberUtil.m; sourceTree = "<group>"; };
+		6BC4092C1DB8C2B000390908 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6BC4092E1DB912BD00390908 /* bon-samaritain-900.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bon-samaritain-900.png"; path = "../../../../Downloads/bon-samaritain-900.png"; sourceTree = "<group>"; };
+		6BC409301DB9134500390908 /* bon-samaritain-900.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bon-samaritain-900.jpg"; sourceTree = "<group>"; };
+		6BC409321DB9141400390908 /* bon-samaritain-80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bon-samaritain-80.jpg"; sourceTree = "<group>"; };
+		6BC409361DB9157400390908 /* bon-samaritain-300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bon-samaritain-300.jpg"; sourceTree = "<group>"; };
 		6BCAE7841DB7683D0002B43C /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		6BCAE7851DB7683D0002B43C /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		6BCAE7961DB77DD50002B43C /* add2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add2.png; sourceTree = "<group>"; };
@@ -579,6 +628,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC4092D1DB8C2B000390908 /* CoreTelephony.framework in Frameworks */,
 				6B516FBD1D8AA88600D1A45A /* MapKit.framework in Frameworks */,
 				FCF4823A1D77043400946B2E /* CoreLocation.framework in Frameworks */,
 				FC4E83501D76C31700D9D5BC /* PushKit.framework in Frameworks */,
@@ -643,6 +693,10 @@
 		6BC306731DA4FA2B002A09E6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6BC4092E1DB912BD00390908 /* bon-samaritain-900.png */,
+				6BC409301DB9134500390908 /* bon-samaritain-900.jpg */,
+				6BC409321DB9141400390908 /* bon-samaritain-80.jpg */,
+				6BC409361DB9157400390908 /* bon-samaritain-300.jpg */,
 				6BCAE7841DB7683D0002B43C /* add.png */,
 				6BCAE7851DB7683D0002B43C /* edit.png */,
 				6BCAE7961DB77DD50002B43C /* add2.png */,
@@ -853,12 +907,47 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		6BC408F11DB8C24700390908 /* libPhoneNumber */ = {
+			isa = PBXGroup;
+			children = (
+				6BC408FA1DB8C24700390908 /* NBAsYouTypeFormatter.h */,
+				6BC408FB1DB8C24700390908 /* NBAsYouTypeFormatter.m */,
+				6BC408FC1DB8C24700390908 /* NBMetadataCore.h */,
+				6BC408FD1DB8C24700390908 /* NBMetadataCore.m */,
+				6BC408FE1DB8C24700390908 /* NBMetadataCoreMapper.h */,
+				6BC408FF1DB8C24700390908 /* NBMetadataCoreMapper.m */,
+				6BC409001DB8C24700390908 /* NBMetadataCoreTest.h */,
+				6BC409011DB8C24700390908 /* NBMetadataCoreTest.m */,
+				6BC409021DB8C24700390908 /* NBMetadataCoreTestMapper.h */,
+				6BC409031DB8C24700390908 /* NBMetadataCoreTestMapper.m */,
+				6BC409041DB8C24700390908 /* NBMetadataHelper.h */,
+				6BC409051DB8C24700390908 /* NBMetadataHelper.m */,
+				6BC409061DB8C24700390908 /* NBNumberFormat.h */,
+				6BC409071DB8C24700390908 /* NBNumberFormat.m */,
+				6BC409081DB8C24700390908 /* NBPhoneMetaData.h */,
+				6BC409091DB8C24700390908 /* NBPhoneMetaData.m */,
+				6BC4090A1DB8C24700390908 /* NBPhoneMetaDataGenerator.h */,
+				6BC4090B1DB8C24700390908 /* NBPhoneMetaDataGenerator.m */,
+				6BC4090C1DB8C24700390908 /* NBPhoneNumber.h */,
+				6BC4090D1DB8C24700390908 /* NBPhoneNumber.m */,
+				6BC4090E1DB8C24700390908 /* NBPhoneNumberDefines.h */,
+				6BC4090F1DB8C24700390908 /* NBPhoneNumberDefines.m */,
+				6BC409101DB8C24700390908 /* NBPhoneNumberDesc.h */,
+				6BC409111DB8C24700390908 /* NBPhoneNumberDesc.m */,
+				6BC409131DB8C24700390908 /* NBPhoneNumberUtil.h */,
+				6BC409141DB8C24700390908 /* NBPhoneNumberUtil.m */,
+			);
+			path = libPhoneNumber;
+			sourceTree = "<group>";
+		};
 		FC4E830F1D76C1A700D9D5BC = {
 			isa = PBXGroup;
 			children = (
+				6BC4092C1DB8C2B000390908 /* CoreTelephony.framework */,
 				6B516FBC1D8AA88600D1A45A /* MapKit.framework */,
 				FCF482391D77043400946B2E /* CoreLocation.framework */,
 				FC4E834F1D76C31700D9D5BC /* PushKit.framework */,
+				6BC408F11DB8C24700390908 /* libPhoneNumber */,
 				FC4E831A1D76C1A800D9D5BC /* pushvoip */,
 				FC4E83341D76C1A800D9D5BC /* pushvoipTests */,
 				FC4E833F1D76C1A800D9D5BC /* pushvoipUITests */,
@@ -1148,8 +1237,10 @@
 				6BC307E31DA4FA2B002A09E6 /* TLS@2x.png in Resources */,
 				6BC307681DA4FA2B002A09E6 /* ECU@2x.png in Resources */,
 				6BC3073C1DA4FA2B002A09E6 /* ARM@2x.png in Resources */,
+				6BC4092F1DB912BD00390908 /* bon-samaritain-900.png in Resources */,
 				6BC307AB1DA4FA2B002A09E6 /* MMR@2x.png in Resources */,
 				6BC3074E1DA4FA2B002A09E6 /* BRB@2x.png in Resources */,
+				6BC409371DB9157400390908 /* bon-samaritain-300.jpg in Resources */,
 				6BC307D71DA4FA2B002A09E6 /* SUR@2x.png in Resources */,
 				6BC307E01DA4FA2B002A09E6 /* THA@2x.png in Resources */,
 				6BC307841DA4FA2B002A09E6 /* IRL@2x.png in Resources */,
@@ -1265,6 +1356,7 @@
 				6BC307A31DA4FA2B002A09E6 /* MDA@2x.png in Resources */,
 				6BC307941DA4FA2B002A09E6 /* Kosovo.png in Resources */,
 				6BC3076B1DA4FA2B002A09E6 /* ESP@2x.png in Resources */,
+				6BC409331DB9141400390908 /* bon-samaritain-80.jpg in Resources */,
 				6BC307621DA4FA2B002A09E6 /* DEU@2x.png in Resources */,
 				6BC307D31DA4FA2B002A09E6 /* SOM@2x.png in Resources */,
 				6BC307591DA4FA2B002A09E6 /* COD@2x.png in Resources */,
@@ -1307,6 +1399,7 @@
 				FC4E83261D76C1A800D9D5BC /* Main.storyboard in Resources */,
 				6BC307BC1DA4FA2B002A09E6 /* PAK@2x.png in Resources */,
 				6BC3079E1DA4FA2B002A09E6 /* LTU@2x.png in Resources */,
+				6BC409311DB9134500390908 /* bon-samaritain-900.jpg in Resources */,
 				6BC3076C1DA4FA2B002A09E6 /* EST@2x.png in Resources */,
 				6BC307E11DA4FA2B002A09E6 /* TJK@2x.png in Resources */,
 				6BF0C07E1DA26834002F74BA /* countries.json in Resources */,
@@ -1363,17 +1456,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC409281DB8C24700390908 /* NBPhoneNumberDesc.m in Sources */,
+				6BC409221DB8C24700390908 /* NBMetadataHelper.m in Sources */,
 				6BE2E39E1D9BF6F20013F20C /* BSRegisterFifthViewController.m in Sources */,
+				6BC4091F1DB8C24700390908 /* NBMetadataCoreMapper.m in Sources */,
+				6BC409271DB8C24700390908 /* NBPhoneNumberDefines.m in Sources */,
 				6BE2E39B1D9BF6B80013F20C /* BSRegisterFourthViewController.m in Sources */,
 				6BD060E91D9A9D8E0040EED0 /* BSRegisterThirdViewController.m in Sources */,
+				6BC409261DB8C24700390908 /* NBPhoneNumber.m in Sources */,
+				6BC409251DB8C24700390908 /* NBPhoneMetaDataGenerator.m in Sources */,
 				FC4E83231D76C1A800D9D5BC /* ViewController.m in Sources */,
 				6BD060E31D9A7CCE0040EED0 /* BSRegisterFirstViewController.m in Sources */,
+				6BC409211DB8C24700390908 /* NBMetadataCoreTestMapper.m in Sources */,
 				FC4E83201D76C1A800D9D5BC /* AppDelegate.m in Sources */,
 				6BD060E01D9A78920040EED0 /* BSRegisterNavigationController.m in Sources */,
+				6BC4092A1DB8C24700390908 /* NBPhoneNumberUtil.m in Sources */,
+				6BC4091D1DB8C24700390908 /* NBAsYouTypeFormatter.m in Sources */,
+				6BC409241DB8C24700390908 /* NBPhoneMetaData.m in Sources */,
+				6BC409201DB8C24700390908 /* NBMetadataCoreTest.m in Sources */,
 				6BE2E3A11D9C0D3D0013F20C /* BSRegisterFirstCountryTableViewController.m in Sources */,
 				6BD060E61D9A9C8D0040EED0 /* BSRegisterSecondViewController.m in Sources */,
 				6B68FBF11DAFCC510013F66A /* UITextField+toolbarAddition.m in Sources */,
+				6BC409231DB8C24700390908 /* NBNumberFormat.m in Sources */,
 				FC4E831D1D76C1A800D9D5BC /* main.m in Sources */,
+				6BC4091E1DB8C24700390908 /* NBMetadataCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

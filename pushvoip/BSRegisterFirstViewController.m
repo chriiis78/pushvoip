@@ -10,6 +10,7 @@
 #import "BSRegisterSecondViewController.h"
 #import "BSRegisterFirstCountryTableViewController.h"
 #import <Foundation/Foundation.h>
+#import "NBPhoneNumberUtil.h"
 
 #define PUSH_HOST @"admin.aedmap.org"
 
@@ -22,8 +23,10 @@
 
 @synthesize countryName;
 @synthesize countryFlag;
+@synthesize countryCode;
 @synthesize callingCode;
 @synthesize phoneNumber;
+@synthesize confirmFirst;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,6 +38,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName: @"HelveticaNeue-Thin" size: 20]}];
     
     //lineTop.layer.borderColor=[[UIColor lightGrayColor] CGColor];
+    phoneNumber.delegate = self;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -45,6 +49,7 @@
     }
     
     NSString *country = [defaults objectForKey:@"COUNTRY"];
+    countryCode = [defaults objectForKey:@"COUNTRY_CODE"];
     NSString *myPhoneNumber = [defaults objectForKey:@"PHONE_NUMBER"];
     if (myPhoneNumber != nil){
         [phoneNumber setText:myPhoneNumber];
@@ -57,7 +62,7 @@
     if (country != nil){
         [countryName setTitle: country forState:UIControlStateNormal];
     } else{
-        NSString *countryCode = [locale objectForKey:NSLocaleCountryCode];
+        countryCode = [locale objectForKey:NSLocaleCountryCode];
         country = [[NSLocale systemLocale] displayNameForKey:NSLocaleCountryCode value:countryCode];
         [countryName setTitle: country forState:UIControlStateNormal];
     }
@@ -85,6 +90,61 @@
     NSArray *countrySelected = [sortedCountryDict objectForKey:country];
     [countryFlag setImage: [UIImage imageNamed:[self getImageFilename:countrySelected[2]]] forState:UIControlStateNormal];
     callingCode.text = countrySelected[3];
+    
+    [phoneNumber addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventAllEvents];
+    [phoneNumber becomeFirstResponder];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    [textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
+    return YES;
+}
+
+- (void)textFieldDidChange:(id *)sender
+{
+    NBPhoneNumberUtil *phoneUtil = [[NBPhoneNumberUtil alloc] init];
+    NSError *anError = nil;
+    NBPhoneNumber *myNumber = [phoneUtil parse:phoneNumber.text
+                                 defaultRegion:countryCode error:&anError];
+    if (anError == nil) {
+        NSLog(@"isValidPhoneNumber ? [%@]", [phoneUtil isValidNumber:myNumber] ? @"YES":@"NO");
+        
+        // E164          : +436766077303
+        NSLog(@"E164          : %@", [phoneUtil format:myNumber
+                                          numberFormat:NBEPhoneNumberFormatE164
+                                                 error:&anError]);
+        // INTERNATIONAL : +43 676 6077303
+        NSLog(@"INTERNATIONAL : %@", [phoneUtil format:myNumber
+                                          numberFormat:NBEPhoneNumberFormatINTERNATIONAL
+                                                 error:&anError]);
+        // NATIONAL      : 0676 6077303
+        NSLog(@"NATIONAL      : %@", [phoneUtil format:myNumber
+                                          numberFormat:NBEPhoneNumberFormatNATIONAL
+                                                 error:&anError]);
+        // RFC3966       : tel:+43-676-6077303
+        NSLog(@"RFC3966       : %@", [phoneUtil format:myNumber
+                                          numberFormat:NBEPhoneNumberFormatRFC3966
+                                                 error:&anError]);
+    } else {
+        NSLog(@"Error : %@", [anError localizedDescription]);
+    }
+    
+    NSLog (@"extractCountryCode [%@]", [phoneUtil extractCountryCode:@"823213123123" nationalNumber:nil]);
+    
+    NSString *nationalNumber = nil;
+    NSNumber *countryCode = [phoneUtil extractCountryCode:@"823213123123" nationalNumber:&nationalNumber];
+    
+    NSLog (@"extractCountryCode [%@] [%@]", countryCode, nationalNumber);
+    
+    if ([phoneUtil isValidNumber:myNumber] == NO){
+        confirmFirst.enabled = NO;
+        confirmFirst.backgroundColor = [UIColor colorWithRed:0.862861 green:0.862861 blue:0.862861 alpha:1];
+    } else{
+        confirmFirst.enabled = YES;
+        confirmFirst.backgroundColor = [UIColor colorWithRed:0.000323687 green:0.69973 blue:0.231126 alpha:1];
+    }
 }
 
 - (NSString *)getImageFilename:(NSString *)sections
@@ -101,6 +161,8 @@
 
 - (IBAction)unwindFromModalViewController:(UIStoryboardSegue *)segue
 {
+    NSLog(@"unwind %@ %@", countryCode, phoneNumber.text);
+    [phoneNumber addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventAllEvents];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -134,6 +196,7 @@
             [defaults setObject:token forKey:@"WAIT_CODE_TOKEN"];
             [defaults setObject:countryName.titleLabel.text forKey:@"COUNTRY"];
             [defaults setObject:phoneNumber.text forKey:@"PHONE_NUMBER"];
+            [defaults setObject:countryCode forKey:@"COUNTRY_CODE"];
             [defaults synchronize];
             
             UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
